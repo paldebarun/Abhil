@@ -1,7 +1,12 @@
 import React from "react";
+import PageHeader from "../Layout/PageHeader";
 
 const Appointment = () => {
-  return <div>Appointment</div>;
+  return (
+    <div className="w-full min-h-[100vh]  ">
+      <PageHeader title1={"Appointment"} title2={""} />
+    </div>
+  );
 };
 
 export default Appointment;

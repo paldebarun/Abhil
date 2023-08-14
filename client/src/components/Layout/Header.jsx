@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { BiPhoneCall } from "react-icons/bi";
 import { HiMenu } from "react-icons/hi";
 import { RiCloseFill } from "react-icons/ri";
-import "./layout.css";
 const Header = () => {
   const [activeUrl, setActiveUrl] = useState(location.pathname);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,7 +42,7 @@ const Header = () => {
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div>
-          <Link className=" ">
+          <Link to={"/"} onClick={() => setActiveUrl("/")}>
             <img
               src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/Genical-Logo-2.png"
               alt=""
@@ -57,6 +56,7 @@ const Header = () => {
           {NavLinks.map((item, index) => (
             <Link
               to={item.path}
+              key={index}
               onClick={() => setActiveUrl(item.path)}
               className={`${
                 activeUrl == item.path ? "text-secondary_color  " : ""
@@ -92,7 +92,7 @@ const Header = () => {
 
       {/* NavPhone  */}
       <div
-        className={`lg:h-0 absolute left-0 top-[100%]  bg-primary_color ${
+        className={`z-20 lg:h-0 absolute left-0 top-[100%]  bg-primary_color ${
           menuOpen ? "h-[18rem] duration-300" : "h-0 duration-100"
         } w-[100%]   overflow-hidden  transition-min-h ease-linear `}
       >
