@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import pageHeaderBack from "../../assets/PageHeader/background.jpg";
+import { useMyContext } from "../../context/ActiveLinkContext";
 
 const PageHeader = ({ title1, title2 }) => {
+  const { setActiveUrl } = useMyContext();
+
   return (
     <div
       className="w-full h-[15rem] flex items-center justify-center relative pageheader bg-center bg-no-repeat bg-cover "
@@ -20,10 +23,14 @@ const PageHeader = ({ title1, title2 }) => {
           <span className=" text-white">{title2}</span>
         </div>
         <p className="text-lg text-white text-center">
-          <Link to={"/"} className=" hover:text-secondary_color">
+          <Link
+            onClick={() => setActiveUrl("/")}
+            to={"/"}
+            className=" hover:text-secondary_color"
+          >
             Home
           </Link>
-          /
+          /{" "}
           <span className=" text-secondary_color">{`${title1} ${title2}`}</span>
         </p>
       </div>

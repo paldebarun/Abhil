@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import { BiPhoneCall } from "react-icons/bi";
 import { HiMenu } from "react-icons/hi";
 import { RiCloseFill } from "react-icons/ri";
+import { useMyContext } from "../../context/ActiveLinkContext";
 const Header = () => {
-  const [activeUrl, setActiveUrl] = useState(location.pathname);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { setActiveUrl, activeUrl } = useMyContext();
+
   const NavLinks = [
     {
       title: "Home",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Layout/Header";
@@ -9,7 +9,10 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import Faq from "./components/FAQ/Faq";
 import Services from "./components/Services/Services";
 import Appointment from "./components/Appointment/Appointment";
+
 const App = () => {
+  const [activeUrl, setActiveUrl] = useState(location.pathname);
+
   return (
     <Router>
       <Header />

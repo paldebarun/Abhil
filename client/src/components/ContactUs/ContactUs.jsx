@@ -52,6 +52,7 @@ const ContactUs = () => {
     },
   ];
 
+  //Styled
   const groupStyle = "flex flex-col mb-[10px]";
   const labelStyle = "text-lg font-medium mb-[0.3rem]";
   const inputStyle =
