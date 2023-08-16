@@ -64,10 +64,10 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-full min-h-[100vh] bg-background_color  ">
+    <div className="w-full min-h-[100vh] bg-background_color">
       <PageHeader title1={"Contact"} title2={"Us"} />
 
-      <section className="w-full px-5 lg:px-[4rem] xl:px-[8rem] py-[5rem] flex gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row  transition-all duration-300">
+      <div className="w-full px-5 lg:px-[4rem] xl:px-[8rem] py-[5rem] flex gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row  transition-all duration-300">
         {/* Message Send Form */}
         <div className="lg:w-[45%] animate-slideright">
           <form className="h-full" onSubmit={submitHandler}>
@@ -180,7 +180,7 @@ const ContactUs = () => {
           </article>
 
           {/* Social Media  */}
-          <article className="">
+          <div className="">
             <h1 className="sm:text-2xl mb-4 font-medium ">Fallow Us On</h1>
 
             <div className="flex">
@@ -195,9 +195,9 @@ const ContactUs = () => {
                 </a>
               ))}
             </div>
-          </article>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

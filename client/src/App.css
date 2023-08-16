@@ -2,10 +2,5 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-/* .pageheader {
-  background-image: url("../src/assets/PageHeader/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
