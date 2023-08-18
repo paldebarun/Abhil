@@ -116,6 +116,7 @@ const AboutUs = ({ setActiveUrl }) => {
           </div>
         </div>
 
+        {/* Community Trust  */}
         <CommunityTrust />
 
         {/* Why Choose Us  */}
