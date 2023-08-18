@@ -130,7 +130,7 @@ const ContactUs = () => {
             </div>
 
             <button
-              className="px-3 py-4 mt-6 font-semibold text-white bg-primary_color border-2 border-primary_color  rounded-b-xl rounded-tl-xl hover:bg-transparent hover:text-primary_color transition-all duration-300 "
+              className="px-3 py-4 mt-6 font-semibold text-white bg-primary_color border-2 border-primary_color  rounded-b-xl rounded-tl-xl hover:bg-transparent hover:text-primary_color transition-all duration-300"
               type="submit"
             >
               SEND MESSAGE
@@ -142,7 +142,7 @@ const ContactUs = () => {
         <div className="flex-1 flex flex-col gap-4">
           {/* Head  */}
           <div className="contact-us">
-            <h3 className="  font-[cursive] text-secondary_color text-xl lg:text-4xl my-4">
+            <h3 className="  font-[cursive] text-secondary_color text-xl  my-4">
               Contact Us
             </h3>
             <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl">
@@ -166,11 +166,11 @@ const ContactUs = () => {
           <article className="w-full flex flex-col sm:flex-row sm:flex-wrap">
             {contactDetails.map((item, index) => (
               <div key={index} className="sm:w-[50%] flex gap-2 mb-4">
-                <span className=" text-5xl text-secondary_color">
+                <div className=" text-5xl text-secondary_color">
                   {item.icon}
-                </span>
+                </div>
                 <div>
-                  <span className="  text-xl font-medium"> {item.title}</span>
+                  <span className="text-xl font-medium"> {item.title}</span>
                   <p className="text-lg text-text_color1 break-all">
                     {item.content}
                   </p>
@@ -187,9 +187,9 @@ const ContactUs = () => {
               {socialMediaAccounts.map((item, index) => (
                 <a
                   key={index}
-                  className=" bg-secondary_color mr-4 text-4xl p-1 rounded-full text-white flex items-center justify-center border-2 transition-all  duration-300 border-secondary_color hover:bg-transparent hover:text-primary_color hover:-translate-y-1 "
-                  href="/"
-                  target={item.url}
+                  className=" bg-secondary_color mr-4 text-4xl p-1 rounded-full text-white flex items-center justify-center border-2 transition-all  duration-300   border-secondary_color hover:bg-transparent hover:text-primary_color hover:-translate-y-1 "
+                  href={item.url}
+                  target="_blank"
                 >
                   {item.icon}
                 </a>

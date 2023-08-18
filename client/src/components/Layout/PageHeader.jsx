@@ -8,7 +8,7 @@ const PageHeader = ({ title1, title2 }) => {
 
   return (
     <div
-      className="w-full h-[15rem] flex items-center justify-center relative pageheader bg-center bg-no-repeat bg-cover "
+      className="w-full h-[20rem] flex items-center justify-center relative pageheader bg-center bg-no-repeat bg-cover "
       style={{
         backgroundImage: `url(${pageHeaderBack})`,
       }}
