@@ -14,10 +14,7 @@ const Header = () => {
       title: "Home",
       path: "/",
     },
-    {
-      title: "Appointment",
-      path: "/appointment",
-    },
+
     {
       title: "Services",
       path: "/services",
@@ -31,10 +28,15 @@ const Header = () => {
       path: "/aboutus",
     },
     {
+      title: "Appointment",
+      path: "/appointment",
+    },
+    {
       title: "Contact Us",
       path: "/contactus",
     },
   ];
+
   const menuHnadler = (path) => {
     setActiveUrl(path);
     setMenuOpen(false);

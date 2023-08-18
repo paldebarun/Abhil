@@ -53,10 +53,10 @@ const ContactUs = () => {
   ];
 
   //Styled
-  const groupStyle = "flex flex-col mb-[10px]";
+  const groupStyle = "flex flex-col mb-[1rem]";
   const labelStyle = "text-lg font-medium mb-[0.3rem]";
   const inputStyle =
-    "p-3 rounded-2xl border-[1px] outline-none border-black bg-background_color text-text_color1 ";
+    "p-4 rounded-2xl border-[1px] outline-none border-black bg-background_color text-text_color1 ";
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -130,7 +130,7 @@ const ContactUs = () => {
             </div>
 
             <button
-              className="px-3 py-4 mt-6 font-semibold text-white bg-primary_color border-2 border-primary_color  rounded-b-xl rounded-tl-xl hover:bg-transparent hover:text-primary_color transition-all duration-300"
+              className="px-3 py-4 mt-6 font-semibold text-white bg-primary_color border-2 border-primary_color  rounded-b-2xl rounded-tl-2xl hover:bg-transparent hover:text-primary_color transition-all duration-300"
               type="submit"
             >
               SEND MESSAGE

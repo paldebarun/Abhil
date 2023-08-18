@@ -339,7 +339,10 @@ const ExperiencedPeople = () => {
       {/* People  */}
       <div className="w-full mb-[3rem]  grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {People.map((item, index) => (
-          <div className="w-full rounded-[4rem] overflow-hidden bg-primary_color flex flex-col">
+          <div
+            key={index}
+            className="w-full rounded-[4rem] overflow-hidden bg-primary_color flex flex-col"
+          >
             <div className="h-[75%] w-full relative group  ">
               <img
                 src={item.profileImg}
@@ -349,7 +352,6 @@ const ExperiencedPeople = () => {
               <div className="w-full h-0  group-hover:h-[10rem]  transition-all ease duration-800 bg-primary_color bg-opacity-30 absolute bottom-0  backdrop-blur-sm overflow-hidden ">
                 <div className="h-full flex gap-3 items-center justify-center">
                   <a
-                    key={index}
                     className=" bg-secondary_color  text-3xl p-1 rounded-full text-white flex items-center justify-center border-2 transition-all  duration-300   border-secondary_color hover:bg-transparent hover:-translate-y-1 "
                     href={item.facebookUrl}
                     target="_blank"
@@ -357,7 +359,6 @@ const ExperiencedPeople = () => {
                     <CiFacebook />
                   </a>
                   <a
-                    key={index}
                     className=" bg-secondary_color text-3xl p-1 rounded-full text-white flex items-center justify-center border-2 transition-all  duration-300   border-secondary_color hover:bg-transparent hover:-translate-y-1 "
                     href={item.twitterUrl}
                     target="_blank"
@@ -365,7 +366,6 @@ const ExperiencedPeople = () => {
                     <CiTwitter />
                   </a>
                   <a
-                    key={index}
                     className=" bg-secondary_color  text-3xl p-1 rounded-full text-white flex items-center justify-center border-2 transition-all  duration-300   border-secondary_color hover:bg-transparent hover:-translate-y-1 "
                     href={item.instagramUrl}
                     target="_blank"
