@@ -171,9 +171,7 @@ const Appointment = () => {
                 </div>
                 <div>
                   <span className="text-2xl font-medium"> {item.title}</span>
-                  <p className="text-lg text-text_color1 break-all">
-                    {item.content}
-                  </p>
+                  <p className="text-lg text-text_color1 ">{item.content}</p>
                 </div>
               </div>
             ))}
