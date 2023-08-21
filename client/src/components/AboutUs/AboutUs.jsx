@@ -314,14 +314,14 @@ const ExperiencedPeople = () => {
     },
   ];
   return (
-    <div className=" px-5 lg:px-[4rem] xl:px-[6rem] mb-[8rem]">
+    <div className=" px-5 lg:px-[4rem] xl:px-[6rem] pb-[8rem]">
       <div className="lg:w-[60%] mx-auto mb-[4rem]">
         <h3 className="font-[cursive] text-secondary_color text-xl  my-4 text-center">
-          Why Choose Genical
+          Our Psychologist
         </h3>
 
         <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl my-6  text-center">
-          Taking Care of Your Mental Health
+          The Experienced Psychologists
         </h1>
 
         <p
@@ -331,9 +331,9 @@ const ExperiencedPeople = () => {
             wordSpacing: "1px",
           }}
         >
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ipsam
-          explicabo, aspernatur totam quibabo, aspernatur totam quibabo,
-          aspernatur totam quibusdam unde?
+          Etiam posuere sapien ut luctus vehicula. Aenean non auctor arcu, et
+          tempus arcu. Integer tristique volutpat posuere. Aenean ac lectus
+          ultrices, lacinia leo a volutpat eros curabitur.
         </p>
       </div>
 
