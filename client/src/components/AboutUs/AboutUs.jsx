@@ -13,6 +13,7 @@ import { TiUserAdd } from "react-icons/ti";
 const AboutUs = ({ setActiveUrl }) => {
   return (
     <div className="w-full min-h-[100vh] bg-background_color  ">
+      {/* PageHeader  */}
       <PageHeader title1={"About"} title2={"Us"} setActiveUrl={setActiveUrl} />
 
       {/* About Content */}

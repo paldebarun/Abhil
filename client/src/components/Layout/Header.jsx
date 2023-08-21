@@ -14,11 +14,6 @@ const Header = () => {
       title: "Home",
       path: "/",
     },
-
-    {
-      title: "Services",
-      path: "/services",
-    },
     {
       title: "FAQ",
       path: "/faq",
@@ -98,7 +93,7 @@ const Header = () => {
       {/* NavPhone  */}
       <div
         className={`z-20 lg:h-0 absolute left-0 top-[100%]  bg-primary_color ${
-          menuOpen ? "h-[18rem] duration-300" : "h-0 duration-100"
+          menuOpen ? "h-[16rem] duration-300" : "h-0 duration-100"
         } w-[100%]   overflow-hidden  transition-min-h ease-linear `}
       >
         <div className="flex flex-col px-4 py-1 gap-2 h-[1005]  text-white transition-all ease-linear">

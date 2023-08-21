@@ -12,7 +12,6 @@ import Home from "./components/Home/Home";
 import AboutUs from "./components/AboutUs/AboutUs";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Faq from "./components/FAQ/Faq";
-import Services from "./components/Services/Services";
 import Appointment from "./components/Appointment/Appointment";
 import ScrollToTop from "./utils/ScrollToTop";
 
@@ -26,7 +25,6 @@ const App = () => {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/appointment" element={<Appointment />} />
-        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer />
       <ScrollToTop />

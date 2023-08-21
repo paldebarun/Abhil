@@ -41,6 +41,7 @@ const Appointment = () => {
 
   return (
     <div className="w-full min-h-[100vh] bg-background_color">
+      {/* PageHeader  */}
       <PageHeader title1={"Appoinment"} title2={""} />
 
       <div className="w-full px-5 lg:px-[4rem] xl:px-[8rem] py-[5rem] flex gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row  transition-all duration-300 ">
