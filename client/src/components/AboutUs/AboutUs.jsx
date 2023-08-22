@@ -19,103 +19,7 @@ const AboutUs = ({ setActiveUrl }) => {
       {/* About Content */}
       <div className="w-full pt-[8rem] ">
         {/* About  */}
-        <div className="w-full px-5 lg:px-[4rem] xl:px-[6rem] mb-[8rem] flex items-center gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row transition-all duration-300">
-          {/* Left About Contet  */}
-          <div className=" lg:w-[50%]">
-            <div>
-              <h3 className="font-[cursive] text-secondary_color text-xl  my-4">
-                About AbhiYoungMind
-              </h3>
-            </div>
-
-            <div>
-              <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl my-6">
-                We Are Here for You
-              </h1>
-            </div>
-
-            <div>
-              <p
-                className="my-4 text-justify text-text_color1 "
-                style={{
-                  letterSpacing: "1px",
-                  wordSpacing: "1px",
-                }}
-              >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
-                ipsam explicabo, aspernatur totam quibabo, aspernatur totam
-                quibabo, aspernatur totam quibusdam unde?
-              </p>
-
-              <p
-                className="my-3 text-justify text-text_color1 "
-                style={{
-                  letterSpacing: "1px",
-                  wordSpacing: "1px",
-                }}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-                quod? Lorem ipsum dolor sit amet.
-              </p>
-            </div>
-
-            <section className="flex flex-col md:flex-row gap-5 py-6">
-              <div className="md:w-[50%] flex gap-3 mb-4">
-                <div className=" text-5xl text-secondary_color">
-                  <HiOutlineUserGroup />
-                </div>
-                <div>
-                  <h1 className="  text-2xl font-medium">
-                    Expert Psychologist
-                  </h1>
-                  <p className="text-lg text-text_color1 break-all">
-                    Etiam posuere sapien ut sed vehicula aenean non.
-                  </p>
-                </div>
-              </div>
-
-              <div className="md:w-[50%] flex gap-2 mb-4">
-                <div className=" text-5xl text-secondary_color">
-                  <HiOutlineUserGroup />
-                </div>
-                <div>
-                  <h1 className="  text-2xl font-medium">Confidentiality</h1>
-                  <p className="text-lg text-text_color1 break-all">
-                    Etiam tiam posuere sapien ut sed vehicula aenean non.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <div className="p-7 border-l-2 border-secondary_color rounded-tl-3xl">
-              <p className=" font-[cursive] text-xl text-text_color1">
-                “Vestibulum blandit felis a auctor efficitur. In in erated nec
-                ipsum eleifend lacinia in nec libero sed dictum magna.”
-              </p>
-            </div>
-          </div>
-
-          {/* Right About Banner */}
-          <div className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh] animate-slideleft">
-            <div className="w-[80%] h-[90%] bg-primary_color p-6 rounded-[3rem]  absolute left-6 -bottom-6  "></div>
-            <div className="w-[90%] top-0 right-0 absolute h-full ">
-              <img
-                src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/psychiatrists-doctor-provide-mental-health-counsel-74S9LDRa.jpg"
-                alt="about us"
-                className="rounded-l-[3rem] w-full h-full "
-              />
-            </div>
-
-            <div className="absolute -bottom-12 left-0 w-[50%] h-[28%] bg-secondary_color border-[0.8rem] border-white rounded-r-[3rem] rounded-tl-[3rem] text-white text-center grid place-items-center ">
-              <div>
-                <h1 className="text-3xl sm:text-5xl font-bold relative">
-                  13 <span className="text-xl absolute sm:ml-2 ">Th</span>
-                </h1>
-                <p className="sm:text-xl">Years Experience</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <About />
 
         {/* Community Trust  */}
         <CommunityTrust />
@@ -130,7 +34,107 @@ const AboutUs = ({ setActiveUrl }) => {
   );
 };
 
-const WhyChooseUs = () => {
+export const About = () => {
+  return (
+    <div className="w-full px-5 lg:px-[4rem] xl:px-[6rem] pb-[8rem] flex items-center gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row transition-all duration-300">
+      {/* Left About Contet  */}
+      <div className=" lg:w-[50%]">
+        <div>
+          <h3 className="font-[cursive] text-secondary_color text-xl  my-4">
+            About AbhiYoungMind
+          </h3>
+        </div>
+
+        <div>
+          <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl my-6">
+            We Are Here for You
+          </h1>
+        </div>
+
+        <div>
+          <p
+            className="my-4 text-justify text-text_color1 "
+            style={{
+              letterSpacing: "1px",
+              wordSpacing: "1px",
+            }}
+          >
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ipsam
+            explicabo, aspernatur totam quibabo, aspernatur totam quibabo,
+            aspernatur totam quibusdam unde?
+          </p>
+
+          <p
+            className="my-3 text-justify text-text_color1 "
+            style={{
+              letterSpacing: "1px",
+              wordSpacing: "1px",
+            }}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            quod? Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+
+        <section className="flex flex-col md:flex-row gap-5 py-6">
+          <div className="md:w-[50%] flex gap-3 mb-4">
+            <div className=" text-5xl text-secondary_color">
+              <HiOutlineUserGroup />
+            </div>
+            <div>
+              <h1 className="  text-2xl font-medium">Expert Psychologist</h1>
+              <p className="text-lg text-text_color1 break-all">
+                Etiam posuere sapien ut sed vehicula aenean non.
+              </p>
+            </div>
+          </div>
+
+          <div className="md:w-[50%] flex gap-2 mb-4">
+            <div className=" text-5xl text-secondary_color">
+              <HiOutlineUserGroup />
+            </div>
+            <div>
+              <h1 className="  text-2xl font-medium">Confidentiality</h1>
+              <p className="text-lg text-text_color1 break-all">
+                Etiam tiam posuere sapien ut sed vehicula aenean non.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="p-7 border-l-2 border-secondary_color rounded-tl-3xl">
+          <p className=" font-[cursive] text-xl text-text_color1">
+            “Vestibulum blandit felis a auctor efficitur. In in erated nec ipsum
+            eleifend lacinia in nec libero sed dictum magna.”
+          </p>
+        </div>
+      </div>
+
+      {/* Right About Banner */}
+      <div className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh] animate-slideleft">
+        <div className="w-[80%] h-[90%] bg-primary_color p-6 rounded-[3rem]  absolute left-6 -bottom-6  "></div>
+        <div className="w-[90%] top-0 right-0 absolute h-full ">
+          <img
+            src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/psychiatrists-doctor-provide-mental-health-counsel-74S9LDRa.jpg"
+            alt="about us"
+            className="rounded-l-[3rem] w-full h-full "
+          />
+        </div>
+
+        <div className="absolute -bottom-12 left-0 w-[50%] h-[28%] bg-secondary_color border-[0.8rem] border-white rounded-r-[3rem] rounded-tl-[3rem] text-white text-center grid place-items-center ">
+          <div>
+            <h1 className="text-3xl sm:text-5xl font-bold relative">
+              13 <span className="text-xl absolute sm:ml-2 ">Th</span>
+            </h1>
+            <p className="sm:text-xl">Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const WhyChooseUs = () => {
   const SkillSet = [
     {
       title: "Confidentiality",
@@ -274,7 +278,7 @@ const WhyChooseUs = () => {
   );
 };
 
-const ExperiencedPeople = () => {
+export const ExperiencedPeople = () => {
   const People = [
     {
       title: "Emily Spector",
@@ -398,7 +402,7 @@ const ExperiencedPeople = () => {
   );
 };
 
-const CommunityTrust = () => {
+export const CommunityTrust = () => {
   return (
     <div
       className="w-full  bg-fixed relative mb-[8rem] "
