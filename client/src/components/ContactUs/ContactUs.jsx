@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiLocationPlus, BiPhoneCall, BiWorld } from "react-icons/bi";
 import { CiFacebook, CiInstagram, CiTwitter, CiYoutube } from "react-icons/ci";
 import { AiOutlineMail } from "react-icons/ai";
 import PageHeader from "../Layout/PageHeader";
+import axios from "axios";
+import { server } from "../../main";
+import Loading from "../../utils/Loading";
+import { toast } from "react-hot-toast";
+import MetaData from "../../utils/MetaData";
 
 const ContactUs = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
+
+  const [loading, setLoading] = useState(false);
 
   const contactDetails = [
     {
@@ -58,13 +65,38 @@ const ContactUs = () => {
   const inputStyle =
     "p-4 rounded-2xl border-[1px] outline-none border-black bg-background_color text-text_color1 ";
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(name, email, subject, message);
+    try {
+      setLoading(true);
+      const { data } = await axios.post(
+        `${server}/sendmessage`,
+        {
+          name,
+          email,
+          subject,
+          message,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
+      setLoading(false);
+      toast.success(data.message);
+    } catch (error) {
+      setLoading(false);
+      toast.error(error.response.data.message);
+    }
   };
 
   return (
     <div className="w-full min-h-[100vh] bg-background_color">
+      {/* MetData  */}
+      <MetaData title={"FAQ"} />
+
       {/* PageHeader  */}
       <PageHeader title1={"Contact"} title2={"Us"} />
 
@@ -83,7 +115,7 @@ const ContactUs = () => {
                 id="name"
                 placeholder="Full Name"
                 onChange={(e) => setName(e.target.value)}
-                required
+                // required
               />
             </div>
             <div className={groupStyle}>
@@ -97,7 +129,7 @@ const ContactUs = () => {
                 id="email"
                 placeholder="Email Address"
                 onChange={(e) => setEmail(e.target.value)}
-                required
+                // required
               />
             </div>
             <div className={groupStyle}>
@@ -111,7 +143,7 @@ const ContactUs = () => {
                 id="subject"
                 placeholder="Subject"
                 onChange={(e) => setSubject(e.target.value)}
-                required
+                // required
               />
             </div>
             <div className={groupStyle}>
@@ -126,15 +158,17 @@ const ContactUs = () => {
                 rows="6"
                 placeholder="Message"
                 onChange={(e) => setMessage(e.target.value)}
-                required
+                // required
               ></textarea>
             </div>
 
             <button
-              className="px-3 py-4 mt-6 font-semibold text-white bg-primary_color border-2 border-primary_color  rounded-b-2xl rounded-tl-2xl hover:bg-transparent hover:text-primary_color transition-all duration-300"
+              className="flex items-center justify-center gap-3 px-3 py-4 mt-6 font-semibold text-white bg-primary_color border-2 border-primary_color  rounded-b-2xl rounded-tl-2xl hover:bg-transparent hover:text-primary_color transition-all duration-300"
               type="submit"
+              disabled={loading}
             >
-              SEND MESSAGE
+              {loading ? "SENDING" : "SEND MESSAGE"}{" "}
+              {loading ? <Loading /> : ""}
             </button>
           </form>
         </div>

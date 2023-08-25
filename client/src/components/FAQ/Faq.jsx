@@ -1,5 +1,6 @@
 import React from "react";
 import PageHeader from "../Layout/PageHeader";
+import MetaData from "../../utils/MetaData";
 
 const Faq = () => {
   const FAQ = [
@@ -74,6 +75,9 @@ const Faq = () => {
 
   return (
     <div className="w-full min-h-[100vh]   ">
+      {/* MetData  */}
+      <MetaData title={"FAQ"} />
+
       {/* PageHeader  */}
       <PageHeader title1={"FAQ"} title2={""} />
 

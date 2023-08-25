@@ -8,10 +8,14 @@ import {
 } from "../AboutUs/AboutUs";
 import { AppointmentForm } from "../Appointment/Appointment";
 import { FaPeopleArrows } from "react-icons/fa";
+import MetaData from "../../utils/MetaData";
 
 const Home = () => {
   return (
     <div className="w-full min-h-[100vh]  ">
+      {/* MetData  */}
+      <MetaData title={"Home"} />
+
       {/* Home Content  */}
       <div>
         {/* Intro  */}

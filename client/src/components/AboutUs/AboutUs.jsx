@@ -9,10 +9,14 @@ import { GoThumbsup } from "react-icons/go";
 import { TbUsersGroup } from "react-icons/tb";
 import { PiHandshakeLight } from "react-icons/pi";
 import { TiUserAdd } from "react-icons/ti";
+import MetaData from "../../utils/MetaData";
 
 const AboutUs = ({ setActiveUrl }) => {
   return (
     <div className="w-full min-h-[100vh] bg-background_color  ">
+      {/* MetData  */}
+      <MetaData title={"About Us"} />
+
       {/* PageHeader  */}
       <PageHeader title1={"About"} title2={"Us"} setActiveUrl={setActiveUrl} />
 

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { FaUserSecret, FaRegAddressBook, FaRegClock } from "react-icons/fa";
 import PageHeader from "../Layout/PageHeader";
+import MetaData from "../../utils/MetaData";
 
 const Appointment = () => {
   return (
     <div className="w-full min-h-[100vh] bg-background_color">
+      {/* MetData  */}
+      <MetaData title={"Appoinment"} />
+
       {/* PageHeader  */}
       <PageHeader title1={"Appoinment"} title2={""} />
 
