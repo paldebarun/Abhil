@@ -6,9 +6,10 @@ import {
   ExperiencedPeople,
   WhyChooseUs,
 } from "../AboutUs/AboutUs";
-import { AppointmentForm } from "../Appointment/Appointment";
+
 import { FaPeopleArrows } from "react-icons/fa";
 import MetaData from "../../utils/MetaData";
+import { AppintmentForm } from "../Appointment/Appointment";
 
 const Home = () => {
   return (
@@ -98,7 +99,7 @@ const Home = () => {
         <ExperiencedPeople />
 
         {/* Appointment */}
-        <AppointmentForm />
+        <AppintmentForm />
       </div>
     </div>
   );

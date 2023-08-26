@@ -97,27 +97,25 @@ const Faq = () => {
         {/* FAQ  */}
         <div className=" space-y-8 transition-all duration-300">
           {FAQ.map((item, index) => (
-            <>
-              <div key={index} className=" shadow-md px-6 py-4 rounded-lg">
-                <h1
-                  className="text-2xl font-semibold py-2"
-                  style={{
-                    letterSpacing: "1px",
-                  }}
-                >
-                  {item.ques}
-                </h1>
-                <p
-                  className=" text-text_color1"
-                  style={{
-                    letterSpacing: "1px",
-                    wordSpacing: "1px",
-                  }}
-                >
-                  {item.ans}
-                </p>
-              </div>
-            </>
+            <div key={index} className=" shadow-md px-6 py-4 rounded-lg">
+              <h1
+                className="text-2xl font-semibold py-2"
+                style={{
+                  letterSpacing: "1px",
+                }}
+              >
+                {item.ques}
+              </h1>
+              <p
+                className=" text-text_color1"
+                style={{
+                  letterSpacing: "1px",
+                  wordSpacing: "1px",
+                }}
+              >
+                {item.ans}
+              </p>
+            </div>
           ))}
         </div>
       </div>
