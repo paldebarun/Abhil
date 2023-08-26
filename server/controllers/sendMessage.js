@@ -1,4 +1,4 @@
-import { ContactUsModel } from "../models/contactUs.js";
+import { ContactUsModel } from "../models/contact.js";
 import ErrorHandler from "../utils/errorHandler.js";
 import { senEmail } from "../utils/sendMail.js";
 
