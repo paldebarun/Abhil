@@ -29,7 +29,7 @@ const Home = () => {
           <div className=" absolute w-full h-full top-0 left-0 bg-primary_color bg-opacity-50"></div>
 
           {/* Intro Conent  */}
-          <div className="w-full h-full absolute top-[10%] flex flex-col gap-8 sm:gap-10 items-center text-center  z-10 transition-all duration-300">
+          <div className="w-full h-full absolute top-[10%] flex flex-col gap-4 sm:gap-10 items-center text-center  z-10 transition-all duration-300">
             <h3 className=" text-white text-2xl sm:text-3xl font-[cursive] animate-slideBottom">
               Welocme to Genical
             </h3>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaUserSecret, FaRegAddressBook, FaRegClock } from "react-icons/fa";
 import PageHeader from "../Layout/PageHeader";
 import MetaData from "../../utils/MetaData";
-
+import downArrow from "../../assets/down-arrow-svgrepo-com.svg";
 const Appointment = () => {
   return (
     <div className="w-full min-h-[100vh] bg-background_color">
@@ -117,6 +117,10 @@ export const AppointmentForm = () => {
                 id="services"
                 onChange={(e) => setServices(e.target.value)}
                 defaultValue={""}
+                style={{
+                  appearance: "none",
+                  background: `url(${downArrow}) 95% / 5%  no-repeat`,
+                }}
               >
                 <option disabled hidden value="">
                   Select Option
