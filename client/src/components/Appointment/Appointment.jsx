@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { FaUserSecret, FaRegAddressBook, FaRegClock } from "react-icons/fa";
 import PageHeader from "../Layout/PageHeader";
 import MetaData from "../../utils/MetaData";
+import downArrow from "../../assets/down-arrow-svgrepo-com.svg";
+import { toast } from "react-hot-toast";
+import axios from "axios";
+import { FaUserSecret, FaRegAddressBook, FaRegClock } from "react-icons/fa";
+import { server } from "../../main";
+import Loading from "../../utils/Loading";
 
 const Appointment = () => {
   return (
@@ -14,18 +19,20 @@ const Appointment = () => {
 
       {/* Appintment Content  */}
       <div className="pt-[6rem]">
-        <AppointmentForm />
+        <AppintmentForm />
       </div>
     </div>
   );
 };
 
-export const AppointmentForm = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [phone, setPhone] = useState();
-  const [services, setServices] = useState();
-  const [date, setDate] = useState();
+export const AppintmentForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [date, setDate] = useState("");
+
+  const [loading, setLoading] = useState(false);
 
   const contactDetails = [
     {
@@ -46,9 +53,38 @@ export const AppointmentForm = () => {
   ];
 
   // Submit Form Handler
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log(name, email, phone, services, date);
+  const submitHandler = async (e) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      const { data } = await axios.post(
+        `${server}/appointment`,
+        {
+          name,
+          email,
+          phone,
+          service,
+          date,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
+      console.log(name, service, phone, date, email);
+      setLoading(false);
+      setName("");
+      setEmail("");
+      setPhone("");
+      setService("");
+      setDate("");
+      toast.success(data.message);
+    } catch (error) {
+      setLoading(false);
+      toast.error(error.response.data.message);
+    }
   };
 
   //Styled
@@ -56,7 +92,6 @@ export const AppointmentForm = () => {
   const labelStyle = "text-lg font-medium mb-[0.3rem]";
   const inputStyle =
     "p-4 rounded-2xl border-[1px] outline-none border-black bg-background_color text-text_color1 ";
-
   return (
     <div className="w-full px-5 lg:px-[4rem] xl:px-[8rem] pb-[8rem] flex gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row  transition-all duration-300 ">
       {/* Appointment Send Form */}
@@ -71,6 +106,7 @@ export const AppointmentForm = () => {
               type="text"
               name="name"
               id="name"
+              value={name}
               placeholder="Full Name"
               onChange={(e) => setName(e.target.value)}
               required
@@ -85,6 +121,7 @@ export const AppointmentForm = () => {
               type="email"
               name="email"
               id="email"
+              value={email}
               placeholder="Email Address"
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -99,6 +136,7 @@ export const AppointmentForm = () => {
               type="number"
               name="subject"
               id="subject"
+              value={phone}
               placeholder="Phone Number"
               onChange={(e) => setPhone(e.target.value)}
               required
@@ -115,8 +153,12 @@ export const AppointmentForm = () => {
                 className={inputStyle}
                 name="services"
                 id="services"
-                onChange={(e) => setServices(e.target.value)}
-                defaultValue={""}
+                onChange={(e) => setService(e.target.value)}
+                value={service}
+                style={{
+                  appearance: "none",
+                  background: `url(${downArrow}) 95% / 5%  no-repeat`,
+                }}
               >
                 <option disabled hidden value="">
                   Select Option
@@ -136,6 +178,7 @@ export const AppointmentForm = () => {
                 type="date"
                 name="subject"
                 id="subject"
+                value={date}
                 placeholder="Phone Number"
                 onChange={(e) => setDate(e.target.value)}
                 required
@@ -144,10 +187,12 @@ export const AppointmentForm = () => {
           </div>
 
           <button
-            className="px-3 py-4 mt-6 font-semibold text-white bg-primary_color border-2 border-primary_color  rounded-b-2xl rounded-tl-2xl hover:bg-transparent hover:text-primary_color transition-all duration-300"
+            className="flex items-center justify-center gap-3 px-3 py-4 mt-6 font-semibold text-white bg-primary_color border-2 border-primary_color  rounded-b-2xl rounded-tl-2xl hover:bg-transparent hover:text-primary_color transition-all duration-300"
             type="submit"
+            disabled={loading}
           >
-            BOOK AND APPOINMENT
+            {loading ? "BOOKING" : " BOOK AND APPOINMENT"}{" "}
+            {loading ? <Loading /> : ""}
           </button>
         </form>
       </div>
@@ -192,4 +237,5 @@ export const AppointmentForm = () => {
     </div>
   );
 };
+
 export default Appointment;

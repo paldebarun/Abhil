@@ -6,9 +6,10 @@ import {
   ExperiencedPeople,
   WhyChooseUs,
 } from "../AboutUs/AboutUs";
-import { AppointmentForm } from "../Appointment/Appointment";
+
 import { FaPeopleArrows } from "react-icons/fa";
 import MetaData from "../../utils/MetaData";
+import { AppintmentForm } from "../Appointment/Appointment";
 
 const Home = () => {
   return (
@@ -29,8 +30,8 @@ const Home = () => {
           <div className=" absolute w-full h-full top-0 left-0 bg-primary_color bg-opacity-50"></div>
 
           {/* Intro Conent  */}
-          <div className="w-full h-full absolute top-[10%] flex flex-col gap-10 items-center text-center  z-10 transition-all duration-300">
-            <h3 className=" text-white text-3xl font-[cursive] animate-slideBottom">
+          <div className="w-full h-full absolute top-[10%] flex flex-col gap-4 sm:gap-10 items-center text-center  z-10 transition-all duration-300">
+            <h3 className=" text-white text-2xl sm:text-3xl font-[cursive] animate-slideBottom">
               Welocme to Genical
             </h3>
 
@@ -53,8 +54,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 w-full px-5 lg:px-[4rem] xl:px-[6rem] animate-slideup pb-[8rem] mt-[-8rem] transition-all duration-300">
-          <div className="text-center bg-secondary_color flex flex-col gap-2 items-center justify-center py-14 px-6 rounded-l-[3rem] rounded-br-[3rem]">
+        <div className="flex flex-col md:flex-row gap-8 w-full px-5 lg:px-[4rem] xl:px-[6rem] animate-slideup pb-[8rem] mt-[-6rem] sm:mt-[-8rem] transition-all duration-300">
+          <div className="text-center bg-secondary_color flex flex-col gap-2 items-center justify-center py-8 sm:py-14 px-6 rounded-l-[3rem] rounded-br-[3rem]">
             <span className=" text-6xl">
               <FaPeopleArrows />
             </span>
@@ -98,7 +99,7 @@ const Home = () => {
         <ExperiencedPeople />
 
         {/* Appointment */}
-        <AppointmentForm />
+        <AppintmentForm />
       </div>
     </div>
   );

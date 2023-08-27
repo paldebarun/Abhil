@@ -10,10 +10,10 @@ import { toast } from "react-hot-toast";
 import MetaData from "../../utils/MetaData";
 
 const ContactUs = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [subject, setSubject] = useState();
-  const [message, setMessage] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
   const [loading, setLoading] = useState(false);
 
@@ -66,8 +66,8 @@ const ContactUs = () => {
     "p-4 rounded-2xl border-[1px] outline-none border-black bg-background_color text-text_color1 ";
 
   const submitHandler = async (e) => {
-    e.preventDefault();
     try {
+      e.preventDefault();
       setLoading(true);
       const { data } = await axios.post(
         `${server}/sendmessage`,
@@ -85,6 +85,10 @@ const ContactUs = () => {
         }
       );
       setLoading(false);
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
       toast.success(data.message);
     } catch (error) {
       setLoading(false);
@@ -113,9 +117,10 @@ const ContactUs = () => {
                 type="text"
                 name="name"
                 id="name"
+                value={name}
                 placeholder="Full Name"
                 onChange={(e) => setName(e.target.value)}
-                // required
+                required
               />
             </div>
             <div className={groupStyle}>
@@ -127,9 +132,10 @@ const ContactUs = () => {
                 type="email"
                 name="email"
                 id="email"
+                value={email}
                 placeholder="Email Address"
                 onChange={(e) => setEmail(e.target.value)}
-                // required
+                required
               />
             </div>
             <div className={groupStyle}>
@@ -141,9 +147,10 @@ const ContactUs = () => {
                 type="text"
                 name="subject"
                 id="subject"
+                value={subject}
                 placeholder="Subject"
                 onChange={(e) => setSubject(e.target.value)}
-                // required
+                required
               />
             </div>
             <div className={groupStyle}>
@@ -157,8 +164,9 @@ const ContactUs = () => {
                 cols="30"
                 rows="6"
                 placeholder="Message"
+                value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                // required
+                required
               ></textarea>
             </div>
 

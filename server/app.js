@@ -2,7 +2,7 @@ import express from "express";
 import { config } from "dotenv";
 import ErrorMiddleware from "./middlewares/error.js";
 import { connectDB } from "./data/database.js";
-import router from "./routes/messageRoute.js";
+import router from "./routes/routes.js";
 import cors from "cors";
 config({
   path: "./data/config.env",
@@ -27,11 +27,11 @@ app.use(
 //Connect Database
 connectDB();
 
-app.get("/", (req, res, next) => {
+app.get("/api/v1", (req, res, next) => {
   res.send(`Welcome, This Website is Working on ${process.env.FRONTEND_URL}`);
 });
 
-app.use(router);
+app.use("/api/v1", router);
 
 export default app;
 

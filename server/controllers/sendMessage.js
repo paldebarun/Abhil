@@ -1,4 +1,4 @@
-import { ContactUsModel } from "../models/ContactUs.js";
+import { ContactUsModel } from "../models/contact.js";
 import ErrorHandler from "../utils/errorHandler.js";
 import { senEmail } from "../utils/sendMail.js";
 
@@ -21,7 +21,7 @@ export const sendMessage = async (req, res, next) => {
 
     res.status(200).json({
       success: true,
-      message: "Message Sent Successfully, We Will Conatct With You Soon",
+      message: "Message Sent Successfully, We Will Conatct You Soon",
     });
   } catch (error) {
     next(new ErrorHandler(error, 404));
