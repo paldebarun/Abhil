@@ -167,6 +167,7 @@ export const WhyChooseUs = () => {
       rating: "97",
     },
   ];
+
   return (
     <div className="w-full  px-5 lg:px-[4rem] xl:px-[6rem] mb-[8rem] flex items-center gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col lg:flex-row transition-all duration-300">
       {/* Left About Contet  */}
@@ -341,6 +342,7 @@ export const ExperiencedPeople = () => {
       instagramUrl: "",
     },
   ];
+
   return (
     <div className=" px-5 lg:px-[4rem] xl:px-[6rem] pb-[8rem]">
       <div className="lg:w-[60%] mx-auto mb-[4rem]">
