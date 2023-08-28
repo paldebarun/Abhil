@@ -7,6 +7,7 @@ import axios from "axios";
 import { FaUserSecret, FaRegAddressBook, FaRegClock } from "react-icons/fa";
 import { server } from "../../main";
 import Loading from "../../utils/Loading";
+import { motion } from "framer-motion";
 
 const Appointment = () => {
   return (
@@ -92,10 +93,32 @@ export const AppintmentForm = () => {
   const labelStyle = "text-lg font-medium mb-[0.3rem]";
   const inputStyle =
     "p-4 rounded-2xl border-[1px] outline-none border-black bg-background_color text-text_color1 ";
+
+  const AnimationVarients = {
+    slideRight: {
+      initial: { x: "-100%", opacity: 0 },
+      whileInView: { x: 0, opacity: 1 },
+      viewport: { once: true },
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+      },
+    },
+    slideUp: {
+      initial: { y: "50%", opacity: 0 },
+      whileInView: { y: 0, opacity: 1 },
+      viewport: { once: true },
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <div className="w-full px-5 lg:px-[4rem] xl:px-[8rem] pb-[8rem] flex gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row  transition-all duration-300 ">
       {/* Appointment Send Form */}
-      <div className="lg:w-[45%] animate-slideright">
+      <motion.div {...AnimationVarients.slideRight} className="lg:w-[45%]">
         <form className="h-full" onSubmit={submitHandler}>
           <div className={groupStyle}>
             <label className={labelStyle} htmlFor="name">
@@ -195,7 +218,7 @@ export const AppintmentForm = () => {
             {loading ? <Loading /> : ""}
           </button>
         </form>
-      </div>
+      </motion.div>
 
       {/* Appointment Details  */}
       <div className="flex-1 flex flex-col gap-4">
@@ -204,9 +227,12 @@ export const AppintmentForm = () => {
           <h3 className="  font-[cursive] text-secondary_color text-xl">
             Appointment
           </h3>
-          <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl my-8">
+          <motion.h1
+            {...AnimationVarients.slideUp}
+            className="opacity-0 font-medium text-3xl lg:text-5xl my-8"
+          >
             Make An Appointment
-          </h1>
+          </motion.h1>
           <p
             className="my-8 text-justify text-text_color1 "
             style={{

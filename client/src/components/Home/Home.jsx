@@ -6,10 +6,11 @@ import {
   ExperiencedPeople,
   WhyChooseUs,
 } from "../AboutUs/AboutUs";
-
 import { FaPeopleArrows } from "react-icons/fa";
 import MetaData from "../../utils/MetaData";
 import { AppintmentForm } from "../Appointment/Appointment";
+import { AnimationData } from "../../utils/animationData";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -31,30 +32,42 @@ const Home = () => {
 
           {/* Intro Conent  */}
           <div className="w-full h-full absolute top-[10%] flex flex-col gap-4 sm:gap-10 items-center text-center  z-10 transition-all duration-300">
-            <h3 className=" text-white text-2xl sm:text-3xl font-[cursive] animate-slideBottom">
+            <motion.h3
+              {...AnimationData.slidDown}
+              className=" text-white text-2xl sm:text-3xl font-[cursive] "
+            >
               Welocme to Genical
-            </h3>
+            </motion.h3>
 
-            <h1 className=" text-white text-5xl lg:text-7xl font-bold animate-slideup">
+            <motion.h1
+              {...AnimationData.slideUp}
+              className=" text-white text-5xl lg:text-7xl font-bold "
+            >
               You Deserve{" "}
               <span className=" text-secondary_color">Peace & Freedom</span>
-            </h1>
+            </motion.h1>
 
-            <p className="md:w-[50%] text-center  text-white text-lg">
+            <motion.p
+              {...AnimationData.slideRightDelay}
+              className="md:w-[50%] text-center  text-white text-lg"
+            >
               Etiam posuere sapien ut luctus vehicula. Aenean non auctor arcu,
               et tempus arcu. Integer tristique volutpat posuere. Aenean ac
               lectus ultrices, lacinia leo.
-            </p>
+            </motion.p>
 
-            <div>
+            <motion.div {...AnimationData.slideUpDelay}>
               <button className="px-3 py-4 mt-6 font-semibold text-white bg-transparent border-2 border-secondary_color  rounded-b-2xl rounded-tl-2xl hover:bg-secondary_color  transition-all duration-300">
                 Make An Appointment
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 w-full px-5 lg:px-[4rem] xl:px-[6rem] animate-slideup pb-[8rem] mt-[-6rem] sm:mt-[-8rem] transition-all duration-300">
+        <motion.div
+          {...AnimationData.slideUp}
+          className="flex flex-col md:flex-row gap-8 w-full px-5 lg:px-[4rem] xl:px-[6rem]  pb-[8rem] mt-[-6rem] sm:mt-[-8rem] "
+        >
           <div className="text-center bg-secondary_color flex flex-col gap-2 items-center justify-center py-8 sm:py-14 px-6 rounded-l-[3rem] rounded-br-[3rem]">
             <span className=" text-6xl">
               <FaPeopleArrows />
@@ -84,7 +97,7 @@ const Home = () => {
               Vivamus pharetra neque a lacus. Aenean blandit euismod.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* About  */}
         <About />

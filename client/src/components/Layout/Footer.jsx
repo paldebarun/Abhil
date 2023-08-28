@@ -5,6 +5,8 @@ import { useMyContext } from "../../context/ActiveLinkContext";
 import { CiFacebook, CiInstagram, CiTwitter, CiYoutube } from "react-icons/ci";
 import { BiLocationPlus, BiPhoneCall, BiWorld } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
+import { AnimationData } from "../../utils/animationData";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const { setActiveUrl } = useMyContext();
@@ -112,10 +114,11 @@ const Footer = () => {
           {/* Logo And Social Media Accounts */}
           <div className="lg:w-[33%]">
             <Link to={"/"} onClick={() => setActiveUrl("/")}>
-              <img
+              <motion.img
                 src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/Genical-Logo-2.png"
                 alt=""
-                className="h-[6rem] lg:h-[5rem] mb-6 opacity-0 animate-slideright -ml-3 "
+                className="h-[6rem] lg:h-[5rem] mb-6 opacity-0  -ml-3 "
+                {...AnimationData.slideRight}
               />
             </Link>
 
