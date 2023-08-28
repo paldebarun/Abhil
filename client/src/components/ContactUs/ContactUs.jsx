@@ -8,6 +8,7 @@ import { server } from "../../main";
 import Loading from "../../utils/Loading";
 import { toast } from "react-hot-toast";
 import MetaData from "../../utils/MetaData";
+import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
 
 const ContactUs = () => {
@@ -60,27 +61,6 @@ const ContactUs = () => {
     },
   ];
 
-  const AnimationVarients = {
-    slideRight: {
-      initial: { x: "-100%", opacity: 0 },
-      whileInView: { x: 0, opacity: 1 },
-      viewport: { once: true },
-      transition: {
-        duration: 1.5,
-        ease: "easeInOut",
-      },
-    },
-    slideUp: {
-      initial: { y: "50%", opacity: 0 },
-      whileInView: { y: 0, opacity: 1 },
-      viewport: { once: true },
-      transition: {
-        duration: 1.5,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   //Styled
   const groupStyle = "flex flex-col mb-[1rem]";
   const labelStyle = "text-lg font-medium mb-[0.3rem]";
@@ -128,7 +108,7 @@ const ContactUs = () => {
 
       <div className="w-full px-5 lg:px-[4rem] xl:px-[8rem] py-[5rem] flex gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row  transition-all duration-300">
         {/* Message Send Form */}
-        <motion.div {...AnimationVarients.slideRight} className="lg:w-[45%]">
+        <motion.div {...AnimationData.slideRight} className="lg:w-[45%]">
           <form className="h-full" onSubmit={submitHandler}>
             <div className={groupStyle}>
               <label className={labelStyle} htmlFor="name">
@@ -211,7 +191,7 @@ const ContactUs = () => {
               Contact Us
             </h3>
             <motion.h1
-              {...AnimationVarients.slideUp}
+              {...AnimationData.slideUp}
               className="opacity-0 font-medium text-3xl lg:text-5xl"
             >
               Get In Touch

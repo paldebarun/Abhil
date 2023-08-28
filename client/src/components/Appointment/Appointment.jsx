@@ -7,6 +7,7 @@ import axios from "axios";
 import { FaUserSecret, FaRegAddressBook, FaRegClock } from "react-icons/fa";
 import { server } from "../../main";
 import Loading from "../../utils/Loading";
+import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
 
 const Appointment = () => {
@@ -94,31 +95,10 @@ export const AppintmentForm = () => {
   const inputStyle =
     "p-4 rounded-2xl border-[1px] outline-none border-black bg-background_color text-text_color1 ";
 
-  const AnimationVarients = {
-    slideRight: {
-      initial: { x: "-100%", opacity: 0 },
-      whileInView: { x: 0, opacity: 1 },
-      viewport: { once: true },
-      transition: {
-        duration: 1.5,
-        ease: "easeInOut",
-      },
-    },
-    slideUp: {
-      initial: { y: "50%", opacity: 0 },
-      whileInView: { y: 0, opacity: 1 },
-      viewport: { once: true },
-      transition: {
-        duration: 1.5,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
     <div className="w-full px-5 lg:px-[4rem] xl:px-[8rem] pb-[8rem] flex gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row  transition-all duration-300 ">
       {/* Appointment Send Form */}
-      <motion.div {...AnimationVarients.slideRight} className="lg:w-[45%]">
+      <motion.div {...AnimationData.slideRight} className="lg:w-[45%]">
         <form className="h-full" onSubmit={submitHandler}>
           <div className={groupStyle}>
             <label className={labelStyle} htmlFor="name">
@@ -228,7 +208,7 @@ export const AppintmentForm = () => {
             Appointment
           </h3>
           <motion.h1
-            {...AnimationVarients.slideUp}
+            {...AnimationData.slideUp}
             className="opacity-0 font-medium text-3xl lg:text-5xl my-8"
           >
             Make An Appointment
