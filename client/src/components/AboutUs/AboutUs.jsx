@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import PageHeader from "../Layout/PageHeader";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { RiArrowRightSLine } from "react-icons/ri";
@@ -10,6 +10,14 @@ import { TbUsersGroup } from "react-icons/tb";
 import { PiHandshakeLight } from "react-icons/pi";
 import { TiUserAdd } from "react-icons/ti";
 import MetaData from "../../utils/MetaData";
+import {
+  animate,
+  motion,
+  useInView,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
+import { AnimationData } from "../../utils/animationData";
 
 const AboutUs = ({ setActiveUrl }) => {
   return (
@@ -50,9 +58,12 @@ export const About = () => {
         </div>
 
         <div>
-          <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl my-6">
+          <motion.h1
+            {...AnimationData.slideUp}
+            className="opacity-0  font-medium text-3xl lg:text-5xl my-6"
+          >
             We Are Here for You
-          </h1>
+          </motion.h1>
         </div>
 
         <div>
@@ -115,7 +126,10 @@ export const About = () => {
       </div>
 
       {/* Right About Banner */}
-      <div className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh] animate-slideleft">
+      <motion.div
+        {...AnimationData.slideLeft}
+        className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh] "
+      >
         <div className="w-[80%] h-[90%] bg-primary_color p-6 rounded-[3rem]  absolute left-6 -bottom-6  "></div>
         <div className="w-[90%] top-0 right-0 absolute h-full ">
           <img
@@ -133,7 +147,7 @@ export const About = () => {
             <p className="sm:text-xl">Years Experience</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -153,10 +167,14 @@ export const WhyChooseUs = () => {
       rating: "97",
     },
   ];
+
   return (
     <div className="w-full  px-5 lg:px-[4rem] xl:px-[6rem] mb-[8rem] flex items-center gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col lg:flex-row transition-all duration-300">
       {/* Left About Contet  */}
-      <div className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh] animate-slideright">
+      <motion.div
+        {...AnimationData.slideRight}
+        className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh] "
+      >
         <div className="w-[80%] h-[90%] bg-primary_color p-6 rounded-[3rem]  absolute right-6 -bottom-6  "></div>
         <div className="w-[90%] top-0 left-0 absolute h-full ">
           <img
@@ -173,7 +191,7 @@ export const WhyChooseUs = () => {
             className="w-full h-full"
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Right About Banner */}
       <div className=" lg:w-[50%]">
@@ -184,9 +202,12 @@ export const WhyChooseUs = () => {
         </div>
 
         <div>
-          <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl my-6">
+          <motion.h1
+            {...AnimationData.slideUp}
+            className="opacity-0 font-medium text-3xl lg:text-5xl my-6"
+          >
             Taking Care of Your Mental Health
-          </h1>
+          </motion.h1>
         </div>
 
         <div>
@@ -321,6 +342,7 @@ export const ExperiencedPeople = () => {
       instagramUrl: "",
     },
   ];
+
   return (
     <div className=" px-5 lg:px-[4rem] xl:px-[6rem] pb-[8rem]">
       <div className="lg:w-[60%] mx-auto mb-[4rem]">
@@ -328,9 +350,12 @@ export const ExperiencedPeople = () => {
           Our Psychologist
         </h3>
 
-        <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl my-6  text-center">
+        <motion.h1
+          {...AnimationData.slideUp}
+          className="opacity-0  font-medium text-3xl lg:text-5xl my-6  text-center"
+        >
           The Experienced Psychologists
-        </h1>
+        </motion.h1>
 
         <p
           className="my-2 text-center text-text_color1  "
@@ -407,6 +432,44 @@ export const ExperiencedPeople = () => {
 };
 
 export const CommunityTrust = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const experianceCount = useMotionValue(0);
+  const happyClientCount = useMotionValue(0);
+  const problemSolvedCount = useMotionValue(0);
+  const psyhologistCount = useMotionValue(0);
+
+  const experiance = useTransform(experianceCount, (latest) =>
+    Math.round(latest)
+  );
+  const happyClient = useTransform(happyClientCount, (latest) =>
+    Math.round(latest)
+  );
+  const problemSolved = useTransform(problemSolvedCount, (latest) =>
+    Math.round(latest)
+  );
+  const psyhologist = useTransform(psyhologistCount, (latest) =>
+    Math.round(latest)
+  );
+
+  useEffect(() => {
+    if (isInView) {
+      animate(experianceCount, 12, {
+        duration: 1.5,
+      });
+      animate(happyClientCount, 750, {
+        duration: 1.5,
+      });
+      animate(problemSolvedCount, 540, {
+        duration: 1.5,
+      });
+      animate(psyhologistCount, 120, {
+        duration: 1.5,
+      });
+    }
+  }, [isInView]);
+
   return (
     <div
       className="w-full  bg-fixed relative mb-[8rem] "
@@ -417,13 +480,17 @@ export const CommunityTrust = () => {
       {/* Overlay  */}
       <div className="w-full h-full absolute top-0  left-0  bg-primary_color opacity-70"></div>
 
-      <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 items-center gap-y-10 px-6 py-[8rem]">
+      <div
+        ref={ref}
+        className="w-full grid md:grid-cols-2 lg:grid-cols-4 items-center gap-y-10 px-6 py-[8rem]"
+      >
         <div className=" flex flex-col items-center gap-2 z-10">
           <span className=" text-secondary_color text-6xl">
             <GoThumbsup />
           </span>
           <div className=" text-4xl font-bold text-white relative">
-            13 <span className="text-xl absolute ml-2">Th</span>
+            <motion.span>{experiance}</motion.span>
+            <span className="text-xl absolute ml-2">Th</span>
           </div>
           <h1 className="text-2xl  text-white">Years Experience</h1>
         </div>
@@ -433,7 +500,8 @@ export const CommunityTrust = () => {
             <TbUsersGroup />
           </span>
           <div className=" text-4xl font-bold text-white relative">
-            750<span className="text-xl absolute ml-2 ">+</span>
+            <motion.span>{happyClient}</motion.span>
+            <span className="text-xl absolute ml-2 ">+</span>
           </div>
           <h1 className="text-2xl  text-white">Happy Client</h1>
         </div>
@@ -443,7 +511,8 @@ export const CommunityTrust = () => {
             <PiHandshakeLight />
           </span>
           <div className=" text-4xl font-bold text-white relative">
-            96 <span className="text-xl absolute ml-2">%</span>
+            <motion.span>{problemSolved}</motion.span>{" "}
+            <span className="text-xl absolute ml-2">%</span>
           </div>
           <h1 className="text-2xl  text-white">Problem Solved</h1>
         </div>
@@ -453,7 +522,8 @@ export const CommunityTrust = () => {
             <TiUserAdd />
           </span>
           <div className=" text-4xl font-bold text-white relative">
-            120<span className="text-xl absolute ml-2">+</span>
+            <motion.span>{psyhologist}</motion.span>
+            <span className="text-xl absolute ml-2">+</span>
           </div>
           <h1 className="text-2xl  text-white">Psyhologist</h1>
         </div>

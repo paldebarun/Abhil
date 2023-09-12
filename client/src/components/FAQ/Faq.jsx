@@ -1,6 +1,8 @@
 import React from "react";
 import PageHeader from "../Layout/PageHeader";
 import MetaData from "../../utils/MetaData";
+import { AnimationData } from "../../utils/animationData";
+import { motion } from "framer-motion";
 
 const Faq = () => {
   const FAQ = [
@@ -84,9 +86,12 @@ const Faq = () => {
       <div className="px-4 lg:mx-auto lg:w-[55rem] py-[5rem] ">
         {/* Heading  */}
         <div className=" text-center mb-6 transition-all duration-300">
-          <h1 className="text-2xl md:text-4xl  text-secondary_color font-bold animate-slideright">
+          <motion.h1
+            {...AnimationData.slideRight}
+            className="text-2xl md:text-4xl  text-secondary_color font-bold "
+          >
             Frequently Asked Questions
-          </h1>
+          </motion.h1>
           <p className="md:mx-[3rem] text-lg font-medium text-text_color1 py-6">
             HIO Foundation FAQ answers questions about who we are, where we
             work, how we save lives, when we respond to disasters and what you

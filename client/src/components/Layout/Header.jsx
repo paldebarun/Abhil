@@ -4,6 +4,9 @@ import { BiPhoneCall } from "react-icons/bi";
 import { HiMenu } from "react-icons/hi";
 import { RiCloseFill } from "react-icons/ri";
 import { useMyContext } from "../../context/ActiveLinkContext";
+import { AnimationData } from "../../utils/animationData";
+import { motion } from "framer-motion";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -43,10 +46,11 @@ const Header = () => {
         {/* Logo */}
         <div>
           <Link to={"/"} onClick={() => setActiveUrl("/")}>
-            <img
+            <motion.img
               src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/Genical-Logo-2.png"
               alt=""
-              className="h-[3.5rem] sm:h-[4rem] opacity-0 animate-slideright"
+              className="h-[3.5rem] sm:h-[4rem] opacity-0"
+              {...AnimationData.slideRight}
             />
           </Link>
         </div>

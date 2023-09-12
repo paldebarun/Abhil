@@ -8,6 +8,8 @@ import { server } from "../../main";
 import Loading from "../../utils/Loading";
 import { toast } from "react-hot-toast";
 import MetaData from "../../utils/MetaData";
+import { AnimationData } from "../../utils/animationData";
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -106,7 +108,7 @@ const ContactUs = () => {
 
       <div className="w-full px-5 lg:px-[4rem] xl:px-[8rem] py-[5rem] flex gap-[4rem] lg:gap-[2rem] xl:gap-[4rem] flex-col-reverse  lg:flex-row  transition-all duration-300">
         {/* Message Send Form */}
-        <div className="lg:w-[45%] animate-slideright">
+        <motion.div {...AnimationData.slideRight} className="lg:w-[45%]">
           <form className="h-full" onSubmit={submitHandler}>
             <div className={groupStyle}>
               <label className={labelStyle} htmlFor="name">
@@ -179,7 +181,7 @@ const ContactUs = () => {
               {loading ? <Loading /> : ""}
             </button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Contact Details  */}
         <div className="flex-1 flex flex-col gap-4">
@@ -188,9 +190,12 @@ const ContactUs = () => {
             <h3 className="  font-[cursive] text-secondary_color text-xl  my-4">
               Contact Us
             </h3>
-            <h1 className="opacity-0 animate-slideup font-medium text-3xl lg:text-5xl">
+            <motion.h1
+              {...AnimationData.slideUp}
+              className="opacity-0 font-medium text-3xl lg:text-5xl"
+            >
               Get In Touch
-            </h1>
+            </motion.h1>
             <p
               className="my-4 text-justify text-text_color1 "
               style={{

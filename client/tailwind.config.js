@@ -4,42 +4,6 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        slideright: {
-          from: {
-            transform: `translateX(-200px)`,
-            opacity: 0,
-          },
-
-          to: {
-            transform: `translateX(0px)`,
-            opacity: 1,
-          },
-        },
-
-        slideleft: {
-          from: {
-            transform: `translateX(200px)`,
-            opacity: 0,
-          },
-
-          to: {
-            transform: `translateX(0px)`,
-            opacity: 1,
-          },
-        },
-
-        slideup: {
-          from: {
-            transform: `translateY(30px)`,
-            opacity: 0,
-          },
-
-          to: {
-            transform: `translateY(0px)`,
-            opacity: 1,
-          },
-        },
-
         slideBottom: {
           from: {
             transform: `translateY(-50px)`,
@@ -54,9 +18,6 @@ export default {
       },
 
       animation: {
-        slideright: `slideright 1.5s ease forwards`,
-        slideleft: `slideleft 1.5s ease forwards`,
-        slideup: `slideup 1.5s ease forwards`,
         slideBottom: `slideBottom 1s ease forwards`,
       },
 
@@ -65,11 +26,6 @@ export default {
         secondary_color: "#D9A441",
         background_color: "#F2F2F2",
         text_color1: "#858585",
-      },
-
-      backgroundImage: {
-        pageHeader_background:
-          "url(`https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/mental-health-support-holding-hands-and-group-coun-3QDQQDVa.jpg`)",
       },
     },
   },
