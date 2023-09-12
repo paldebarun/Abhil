@@ -1,5 +1,6 @@
 import React from "react";
 import homeBack from "../../assets/AboutUs/communityTrust.jpg";
+import { useMyContext } from "../../context/ActiveLinkContext";
 import {
   About,
   CommunityTrust,
@@ -11,8 +12,10 @@ import MetaData from "../../utils/MetaData";
 import { AppintmentForm } from "../Appointment/Appointment";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const { setActiveUrl } = useMyContext();
   return (
     <div className="w-full min-h-[100vh]  ">
       {/* MetData  */}
@@ -55,9 +58,9 @@ const Home = () => {
             </motion.p>
 
             <motion.div {...AnimationData.slideUpDelay}>
-              <button className="px-3 py-4 mt-6 font-semibold text-white bg-transparent border-2 border-secondary_color  rounded-b-2xl rounded-tl-2xl hover:bg-secondary_color  transition-all duration-300">
+             <Link to="/appointment" onClick={() => setActiveUrl("/appointment")}> <button className="px-3 py-4 mt-6 font-semibold text-white bg-transparent border-2 border-secondary_color  rounded-b-2xl rounded-tl-2xl hover:bg-secondary_color  transition-all duration-300">
                 Make An Appointment
-              </button>
+              </button> </Link>
             </motion.div>
           </div>
         </div>

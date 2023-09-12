@@ -410,14 +410,14 @@ export const ExperiencedPeople = () => {
         ))}
       </div>
 
-      <div className="w-full grid place-items-center">
+      {/* <div className="w-full grid place-items-center">
         <button
           className="px-3 py-4 font-semibold text-white bg-secondary_color border-2 border-secondary_color  rounded-b-xl rounded-tl-xl hover:bg-transparent hover:text-primary_color transition-all duration-300"
           type="submit"
         >
           VIEW ALL TEAM
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

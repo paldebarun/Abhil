@@ -82,7 +82,7 @@ const Header = () => {
           </div>
           <div className="">
             <p className="text-white text-center text-lg font-semibold">Call Us</p>
-            <span className="text-lg text-secondary_color">+91 8447308007</span>
+            <span className="text-lg text-secondary_color">  <a href="tel:+918447308007">+91 8447308007</a></span>
           </div>
         </div>
 
