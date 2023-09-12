@@ -6,6 +6,7 @@ import { RiCloseFill } from "react-icons/ri";
 import { useMyContext } from "../../context/ActiveLinkContext";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
+import AbhilLogo from '../../assets/PageHeader/AbhilyoungMind.png';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ const Header = () => {
         <div>
           <Link to={"/"} onClick={() => setActiveUrl("/")}>
             <motion.img
-              src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/Genical-Logo-2.png"
+              src={AbhilLogo}
               alt=""
               className="h-[3.5rem] sm:h-[4rem] opacity-0"
               {...AnimationData.slideRight}
@@ -80,8 +81,8 @@ const Header = () => {
             <BiPhoneCall />
           </div>
           <div className="">
-            <p className="text-white text-lg font-semibold">Call Us</p>
-            <span className="text-lg text-secondary_color">+123-234-1234</span>
+            <p className="text-white text-center text-lg font-semibold">Call Us</p>
+            <span className="text-lg text-secondary_color">+91 8447308007</span>
           </div>
         </div>
 

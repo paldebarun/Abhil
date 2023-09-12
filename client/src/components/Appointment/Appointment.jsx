@@ -40,17 +40,17 @@ export const AppintmentForm = () => {
     {
       icon: <FaUserSecret />,
       title: "Customeer Service",
-      content: "+915708458245",
+      content: "+91 8447308007",
     },
     {
       icon: <FaRegAddressBook />,
       title: "Clinic Address",
-      content: "99 Roving St., Big City, PKU 23456",
+      content: "Plot No 184 Kh No 8/21/2, And 18/1/1 Sainik Enclave, Najafgarh, South West Delhi, New Delhi, Delhi, India, 110043",
     },
     {
       icon: <FaRegClock />,
       title: "Opening Hours",
-      content: "Monday - Saturday ( 09.00 - 21.00 ) Sunday ( Closed )",
+      content: "Monday - Saturday ( 09.00 AM - 8.00 PM ) Sunday ( Closed )",
     },
   ];
 
@@ -149,7 +149,7 @@ export const AppintmentForm = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <div className={groupStyle}>
               <label className={labelStyle} htmlFor="message">
-                Select Services
+                Contacting For
               </label>
 
               <select
@@ -166,10 +166,12 @@ export const AppintmentForm = () => {
                 <option disabled hidden value="">
                   Select Option
                 </option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-                <option value="option4">Option 4</option>
+                <option value="option1">Individual Therapy</option>
+                <option value="option2">Family Counseling</option>
+                <option value="option3">Couples Therapy</option>
+                <option value="option4">Children Therapy</option>
+                <option value="option4">Group Counselling</option>
+                <option value="option4">Career Counselling</option>
               </select>
             </div>
             <div className={groupStyle}>
@@ -220,10 +222,7 @@ export const AppintmentForm = () => {
               wordSpacing: "1px",
             }}
           >
-            Nullam fermentum ullamcorper diam sit amet porta. Etiam ac enim
-            velit. Ut ut mi sed turpis accumsan sagittis ac eu magna. Etiam ac
-            nisi lorem et. Morbi at velit nisl. Donec ut felis libero donec
-            tincidunt.
+            Ready to prioritize your mental well-being? Schedule an appointment with us today. Take the first step towards a brighter, smarter, and more fulfilling life.
           </p>
         </div>
 

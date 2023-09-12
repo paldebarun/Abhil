@@ -36,24 +36,22 @@ const Home = () => {
               {...AnimationData.slidDown}
               className=" text-white text-2xl sm:text-3xl font-[cursive] "
             >
-              Welocme to Genical
+              Welocme to Abhil Young Mind
             </motion.h3>
 
             <motion.h1
               {...AnimationData.slideUp}
-              className=" text-white text-5xl lg:text-7xl font-bold "
+              className=" text-white text-3xl lg:text-5xl font-bold "
             >
-              You Deserve{" "}
-              <span className=" text-secondary_color">Peace & Freedom</span>
+              Empowering Youth,{" "}
+              <span className=" text-secondary_color">Inspiring Tomorrow</span>
             </motion.h1>
 
             <motion.p
               {...AnimationData.slideRightDelay}
               className="md:w-[50%] text-center  text-white text-lg"
             >
-              Etiam posuere sapien ut luctus vehicula. Aenean non auctor arcu,
-              et tempus arcu. Integer tristique volutpat posuere. Aenean ac
-              lectus ultrices, lacinia leo.
+              Welcome to our website, where we're dedicated to nurturing the psychological well-being of young individuals, providing guidance to break free from destructive habits, and paving the way for a brighter and more promising future.
             </motion.p>
 
             <motion.div {...AnimationData.slideUpDelay}>
@@ -66,35 +64,35 @@ const Home = () => {
 
         <motion.div
           {...AnimationData.slideUp}
-          className="flex flex-col md:flex-row gap-8 w-full px-5 lg:px-[4rem] xl:px-[6rem]  pb-[8rem] mt-[-6rem] sm:mt-[-8rem] "
+          className=" flex flex-col md:flex-row flex gap-8 w-full px-5 lg:px-[4rem] xl:px-[6rem]  pb-[8rem] mt-[-6rem] sm:mt-[-8rem] "
         >
-          <div className="text-center bg-secondary_color flex flex-col gap-2 items-center justify-center py-8 sm:py-14 px-6 rounded-l-[3rem] rounded-br-[3rem]">
+          <div className="lg:w-1/3 text-center bg-secondary_color flex flex-col gap-2 items-center justify-center py-8 sm:py-14 px-6 rounded-l-[3rem] rounded-br-[3rem]">
             <span className=" text-6xl">
               <FaPeopleArrows />
             </span>
-            <h2 className=" text-white text-2xl font-medium">Consultation</h2>
+            <h2 className=" text-white text-2xl font-medium">Nurturing Minds</h2>
             <p className=" text-lg text-white ">
-              Vivamus pharetra neque a lacus. Aenean blandit euismod.
+            Cultivating mental, emotional health for a fulfilling life.
             </p>
           </div>
 
-          <div className="text-center bg-primary_color flex flex-col  gap-2 items-center justify-center py-14 px-6 rounded-[3rem]">
+          <div className=" lg:w-1/3 text-center bg-primary_color flex flex-col  gap-2 items-center justify-center py-14 px-6 rounded-[3rem]">
             <span className=" text-6xl">
               <FaPeopleArrows />
             </span>
-            <h2 className=" text-white text-2xl font-medium">Consultation</h2>
+            <h2 className=" text-white text-2xl font-medium">Breaking Free Together:</h2>
             <p className=" text-lg text-white ">
-              Vivamus pharetra neque a lacus. Aenean blandit euismod.
+            Guiding Youth Away from Destructive Habits
             </p>
           </div>
 
-          <div className="text-center bg-secondary_color flex flex-col  gap-2 items-center justify-center  py-14 px-6 rounded-r-[3rem] rounded-tl-[3rem]">
+          <div className="lg:w-1/3 text-center bg-secondary_color flex flex-col  gap-2 items-center justify-center  py-14 px-6 rounded-r-[3rem] rounded-tl-[3rem]">
             <span className=" text-6xl">
               <FaPeopleArrows />
             </span>
-            <h2 className=" text-white text-2xl font-medium">Consultation</h2>
+            <h2 className=" text-white text-2xl font-medium">Towards a Brighter Tomorrow</h2>
             <p className=" text-lg text-white ">
-              Vivamus pharetra neque a lacus. Aenean blandit euismod.
+            Paving the Path for Promising Futures
             </p>
           </div>
         </motion.div>

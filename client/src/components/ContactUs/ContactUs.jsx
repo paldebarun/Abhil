@@ -23,7 +23,7 @@ const ContactUs = () => {
     {
       icon: <BiPhoneCall />,
       title: "Call Us",
-      content: "+915708458245",
+      content: "+91 8447308007",
     },
     {
       icon: <AiOutlineMail />,
@@ -38,7 +38,7 @@ const ContactUs = () => {
     {
       icon: <BiLocationPlus />,
       title: "Address",
-      content: "sfbsdf sndfs fnsd bf sd sdkhf ",
+      content: "Plot No 184 Kh No 8/21/2, And 18/1/1 Sainik Enclave, Najafgarh, South West Delhi, New Delhi, Delhi, India, 110043",
     },
   ];
 
@@ -101,7 +101,7 @@ const ContactUs = () => {
   return (
     <div className="w-full min-h-[100vh] bg-background_color">
       {/* MetData  */}
-      <MetaData title={"FAQ"} />
+      <MetaData title={"Contact Us"} />
 
       {/* PageHeader  */}
       <PageHeader title1={"Contact"} title2={"Us"} />
@@ -203,10 +203,7 @@ const ContactUs = () => {
                 wordSpacing: "1px",
               }}
             >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. At magni
-              excepturi eos tempora temporibus quasi ipspora temporibus quasi
-              ipspora temporibus quasi ipsa corrupti mollitia, doloribus, dicta
-              aliquam iste reprehenderit inventore officiis.
+              Have questions or need support? Get in touch with us for guidance on fostering mental growth, improving well-being, and embracing a better, smarter life. We're here to help.
             </p>
           </div>
 

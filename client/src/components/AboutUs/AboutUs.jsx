@@ -53,7 +53,7 @@ export const About = () => {
       <div className=" lg:w-[50%]">
         <div>
           <h3 className="font-[cursive] text-secondary_color text-xl  my-4">
-            About AbhiYoungMind
+            About Abhil Young Mind
           </h3>
         </div>
 
@@ -74,9 +74,7 @@ export const About = () => {
               wordSpacing: "1px",
             }}
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ipsam
-            explicabo, aspernatur totam quibabo, aspernatur totam quibabo,
-            aspernatur totam quibusdam unde?
+            We understand that your mental health is important. Our team of expert psychologists is dedicated to providing the guidance and support you need to navigate life's challenges. Rest assured, your privacy is our priority. 
           </p>
 
           <p
@@ -86,8 +84,7 @@ export const About = () => {
               wordSpacing: "1px",
             }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-            quod? Lorem ipsum dolor sit amet.
+            All interactions are strictly confidential, ensuring a safe and trusted space for you to discuss your concerns openly.
           </p>
         </div>
 
@@ -98,8 +95,7 @@ export const About = () => {
             </div>
             <div>
               <h1 className="  text-2xl font-medium">Expert Psychologist</h1>
-              <p className="text-lg text-text_color1 break-all">
-                Etiam posuere sapien ut sed vehicula aenean non.
+              <p className="text-lg text-text_color1 ">Customized guidance from  experienced psychologists for well-being.
               </p>
             </div>
           </div>
@@ -111,7 +107,7 @@ export const About = () => {
             <div>
               <h1 className="  text-2xl font-medium">Confidentiality</h1>
               <p className="text-lg text-text_color1 break-all">
-                Etiam tiam posuere sapien ut sed vehicula aenean non.
+              Privacy assured, secure space for trust. 
               </p>
             </div>
           </div>
@@ -119,8 +115,7 @@ export const About = () => {
 
         <div className="p-7 border-l-2 border-secondary_color rounded-tl-3xl">
           <p className=" font-[cursive] text-xl text-text_color1">
-            “Vestibulum blandit felis a auctor efficitur. In in erated nec ipsum
-            eleifend lacinia in nec libero sed dictum magna.”
+            “Your mind is your most powerful asset; invest in its growth, and watch your life flourish”
           </p>
         </div>
       </div>
@@ -131,7 +126,7 @@ export const About = () => {
         className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh] "
       >
         <div className="w-[80%] h-[90%] bg-primary_color p-6 rounded-[3rem]  absolute left-6 -bottom-6  "></div>
-        <div className="w-[90%] top-0 right-0 absolute h-full ">
+        <div className="w-[100%] top-16 md:top-0 left-0 absolute h-[80%] md:h-full ">
           <img
             src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/psychiatrists-doctor-provide-mental-health-counsel-74S9LDRa.jpg"
             alt="about us"
@@ -142,7 +137,7 @@ export const About = () => {
         <div className="absolute -bottom-12 left-0 w-[50%] h-[28%] bg-secondary_color border-[0.8rem] border-white rounded-r-[3rem] rounded-tl-[3rem] text-white text-center grid place-items-center ">
           <div>
             <h1 className="text-3xl sm:text-5xl font-bold relative">
-              13 <span className="text-xl absolute sm:ml-2 ">Th</span>
+              5 <span className="text-xl absolute sm:ml-2 ">Th</span>
             </h1>
             <p className="sm:text-xl">Years Experience</p>
           </div>
@@ -176,7 +171,7 @@ export const WhyChooseUs = () => {
         className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh] "
       >
         <div className="w-[80%] h-[90%] bg-primary_color p-6 rounded-[3rem]  absolute right-6 -bottom-6  "></div>
-        <div className="w-[90%] top-0 left-0 absolute h-full ">
+        <div className="w-[100%] top-16 md:top-0 left-0 absolute h-[80%] md:h-full">
           <img
             src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/positive-african-american-couple-hugging-after-rec-PFLEMJZ.jpg"
             alt="about us"
@@ -197,7 +192,7 @@ export const WhyChooseUs = () => {
       <div className=" lg:w-[50%]">
         <div>
           <h3 className="font-[cursive] text-secondary_color text-xl  my-4">
-            Why Choose Genical
+            Why Choose Abhil Young Mind
           </h3>
         </div>
 
@@ -218,34 +213,32 @@ export const WhyChooseUs = () => {
               wordSpacing: "1px",
             }}
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ipsam
-            explicabo, aspernatur totam quibabo, aspernatur totam quibabo,
-            aspernatur totam quibusdam unde?
+            At our foundation, we're deeply committed to the well-being of young individuals, with a primary focus on nurturing their mental health. We provide essential guidance and resources to empower young minds in their journey towards growth and resilience. 
           </p>
         </div>
 
         {/* Visson and Misson  */}
         <section className="flex flex-col md:flex-row gap-5 py-6">
-          <div className="md:w-[50%]">
+          <div className="md:w-[55%]">
             <h1 className="text-2xl font-medium ml-1">Our Vision</h1>
             <div>
               <p className="flex items-center text-text_color1">
                 <span className=" text-xl text-secondary_color">
                   <RiArrowRightSLine />
                 </span>
-                Aenean blandit euismod ipsum.
+                Empowering Minds for a Bright Tomorrow
               </p>
               <p className="flex items-center text-text_color1">
                 <span className=" text-xl text-secondary_color">
                   <RiArrowRightSLine />
                 </span>
-                Aenean blandit euismod ipsum.
+                Nurturing Resilience, Fostering Success
               </p>
               <p className="flex items-center text-text_color1">
                 <span className=" text-xl text-secondary_color">
                   <RiArrowRightSLine />
                 </span>
-                Aenean blandit euismod ipsum.
+                Building a Stronger, Healthier Generation
               </p>
             </div>
           </div>
@@ -257,19 +250,19 @@ export const WhyChooseUs = () => {
                 <span className=" text-xl text-secondary_color">
                   <RiArrowRightSLine />
                 </span>
-                Aenean blandit euismod ipsum.
+                Guiding the Path to Mental Wellness
               </p>
               <p className="flex items-center text-text_color1">
                 <span className=" text-xl text-secondary_color">
                   <RiArrowRightSLine />
                 </span>
-                Aenean blandit euismod ipsum.
+                Empowering Through Education
               </p>
               <p className="flex items-center text-text_color1">
                 <span className=" text-xl text-secondary_color">
                   <RiArrowRightSLine />
                 </span>
-                Aenean blandit euismod ipsum.
+                Breaking Barriers, Inspiring Resilience
               </p>
             </div>
           </div>
@@ -364,9 +357,7 @@ export const ExperiencedPeople = () => {
             wordSpacing: "1px",
           }}
         >
-          Etiam posuere sapien ut luctus vehicula. Aenean non auctor arcu, et
-          tempus arcu. Integer tristique volutpat posuere. Aenean ac lectus
-          ultrices, lacinia leo a volutpat eros curabitur.
+          Meet Our Expert Psychologists: Our dedicated team of experienced psychologists is here to support the mental growth and well-being of young individuals, fostering a brighter, smarter life.
         </p>
       </div>
 
@@ -455,7 +446,7 @@ export const CommunityTrust = () => {
 
   useEffect(() => {
     if (isInView) {
-      animate(experianceCount, 12, {
+      animate(experianceCount, 5, {
         duration: 1.5,
       });
       animate(happyClientCount, 750, {
@@ -472,7 +463,7 @@ export const CommunityTrust = () => {
 
   return (
     <div
-      className="w-full  bg-fixed relative mb-[8rem] "
+      className="w-full bg-fixed relative mb-[8rem] "
       style={{
         backgroundImage: `url(${communityBack})`,
       }}
