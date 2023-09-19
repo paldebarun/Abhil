@@ -7,72 +7,45 @@ import { motion } from "framer-motion";
 const Faq = () => {
   const FAQ = [
     {
-      ques: "What is Help India Online foundation?",
-      ans: "Help India Online foundation is a hybrid organisation. It is a mission driven, affiliate foundation, or Non-profit organization that helps people online in fundraising, donate to charities and solve social issues.",
+      ques: "What is Abhil Young Mind Growth Foundation's mission and focus??",
+      ans: "Our mission is to empower young individuals in their mental growth and well-being journey, helping them lead better and smarter lives through comprehensive support and guidance.",
     },
     {
-      ques: "How can I register with HIO?",
-      ans: "Non Profit Organization doesn't gain any benefits for its owner. Instead, the organization donates the money it receives to help fund the organization’s objectives and goals. A not-for-profit might also use received donations to stay up and running.",
+      ques: "How can your foundation help young people with their mental growth and well-being?",
+      ans: "We offer a range of resources, expert guidance, and a supportive community to assist young people in prioritizing their mental health and fostering personal growth.",
     },
     {
-      ques: "What are the causes supported on Help India Online?",
-      ans: "Help India Online created a special website “Helping Hands” for fundraising. A campaign will have the information, photos and documents that you have provided during the campaign. A campaign is related to many different payment options, and donors can access this page to make donations. Every donation is made through reflected in the progress bar. You can set up the fundraising campaign for yourself, for health, for memorial, and for daughter marriage. You may attach supporting documents( Photos, ID, medical documents) related to your cause on the campaign page to build trust.",
+      ques: "Is your support available online or in-person?",
+      ans: "Our support is primarily available online for easy accessibility, ensuring young individuals can access our services from the comfort of their homes.",
     },
     {
-      ques: "How can I register with HIO?",
-      ans: "Non Profit Organization doesn't gain any benefits for its owner. Instead, the organization donates the money it receives to help fund the organization’s objectives and goals. A not-for-profit might also use received donations to stay up and running.",
+      ques: "Do I need to pay for your services or resources?",
+      ans: "No, our services and resources are provided free of charge to ensure that every young person has access to the help they need.",
     },
     {
-      ques: "How can I register with HIO?",
-      ans: "Non Profit Organization doesn't gain any benefits for its owner. Instead, the organization donates the money it receives to help fund the organization’s objectives and goals. A not-for-profit might also use received donations to stay up and running.",
+      ques: "Who are the experts and professionals behind your foundation?",
+      ans: "Our team consists of experienced psychologists and mental health professionals dedicated to guiding young minds towards better mental well-being.",
     },
     {
-      ques: "What are the causes supported on Help India Online?",
-      ans: "Help India Online created a special website “Helping Hands” for fundraising. A campaign will have the information, photos and documents that you have provided during the campaign. A campaign is related to many different payment options, and donors can access this page to make donations. Every donation is made through reflected in the progress bar. You can set up the fundraising campaign for yourself, for health, for memorial, and for daughter marriage. You may attach supporting documents( Photos, ID, medical documents) related to your cause on the campaign page to build trust.",
+      ques: "How do I make an appointment or access your services?",
+      ans: "You can schedule an appointment or access our services through our website or contact us for further assistance.",
     },
     {
-      ques: "How can I register with HIO?",
-      ans: "Non Profit Organization doesn't gain any benefits for its owner. Instead, the organization donates the money it receives to help fund the organization’s objectives and goals. A not-for-profit might also use received donations to stay up and running.",
+      ques: "Is my information and communication with your foundation kept confidential?",
+      ans: "Yes, we prioritize your privacy, and all interactions and information shared with us are held in strict confidence.",
     },
     {
-      ques: "How NPO benefits individuals?",
-      ans: "A nonprofit corporation can be formed for any lawful purpose in most, if not all, states. A nonprofit corporation for the benefit of a single person would therefore be permissible, but would not qualify for federal charitable tax exemption. Donations to it would be legal, but not deductible for federal income tax purposes. If it did not qualify for any other exemption, it would be subject to payment of federal income tax and filing of income tax returns without regard to how it used the funds.",
+      ques: "What age group does your foundation primarily serve?",
+      ans: "We primarily focus on helping young people, typically between the ages of 12 and 25, but we welcome anyone seeking support for their mental growth and well-being.",
     },
     {
-      ques: "What are the causes supported on Help India Online?",
-      ans: "Help India Online created a special website “Helping Hands” for fundraising. A campaign will have the information, photos and documents that you have provided during the campaign. A campaign is related to many different payment options, and donors can access this page to make donations. Every donation is made through reflected in the progress bar. You can set up the fundraising campaign for yourself, for health, for memorial, and for daughter marriage. You may attach supporting documents( Photos, ID, medical documents) related to your cause on the campaign page to build trust.",
+      ques: "What types of resources and programs do you offer for young minds?",
+      ans: "We provide a range of resources, including articles, webinars, and self-help materials, along with one-on-one guidance from our experts.",
     },
     {
-      ques: "How NPO benefits individuals?",
-      ans: "A nonprofit corporation can be formed for any lawful purpose in most, if not all, states. A nonprofit corporation for the benefit of a single person would therefore be permissible, but would not qualify for federal charitable tax exemption. Donations to it would be legal, but not deductible for federal income tax purposes. If it did not qualify for any other exemption, it would be subject to payment of federal income tax and filing of income tax returns without regard to how it used the funds.",
-    },
-    {
-      ques: "How NPO benefits individuals?",
-      ans: "A nonprofit corporation can be formed for any lawful purpose in most, if not all, states. A nonprofit corporation for the benefit of a single person would therefore be permissible, but would not qualify for federal charitable tax exemption. Donations to it would be legal, but not deductible for federal income tax purposes. If it did not qualify for any other exemption, it would be subject to payment of federal income tax and filing of income tax returns without regard to how it used the funds.",
-    },
-    {
-      ques: "How NPO benefits individuals?",
-      ans: "A nonprofit corporation can be formed for any lawful purpose in most, if not all, states. A nonprofit corporation for the benefit of a single person would therefore be permissible, but would not qualify for federal charitable tax exemption. Donations to it would be legal, but not deductible for federal income tax purposes. If it did not qualify for any other exemption, it would be subject to payment of federal income tax and filing of income tax returns without regard to how it used the funds.",
-    },
-
-    {
-      ques: "What is a fundraising campaign, how do I set a fundraiser campaign?",
-      ans: "The crowdfunding for charities included medical expenses of family, memorial, daughter marriage.",
-    },
-
-    {
-      ques: "What are the causes supported on Help India Online?",
-      ans: "Help India Online created a special website “Helping Hands” for fundraising. A campaign will have the information, photos and documents that you have provided during the campaign. A campaign is related to many different payment options, and donors can access this page to make donations. Every donation is made through reflected in the progress bar. You can set up the fundraising campaign for yourself, for health, for memorial, and for daughter marriage. You may attach supporting documents( Photos, ID, medical documents) related to your cause on the campaign page to build trust.",
-    },
-
-    {
-      ques: "What are the causes supported on Help India Online?",
-      ans: "Help India Online created a special website “Helping Hands” for fundraising. A campaign will have the information, photos and documents that you have provided during the campaign. A campaign is related to many different payment options, and donors can access this page to make donations. Every donation is made through reflected in the progress bar. You can set up the fundraising campaign for yourself, for health, for memorial, and for daughter marriage. You may attach supporting documents( Photos, ID, medical documents) related to your cause on the campaign page to build trust.",
-    },
-    {
-      ques: "How does the Digital Help Wing work?",
-      ans: "Help Wing extends helping hands to members in crisis through community fundraising for marriage of sister or daughter in blood relation, major crisis like death, permanent disablement and for thirty-four critical illnesses. While empathizing the happiness of giving to contributors, the power of multiplication transforms small donation from Rs. 3/- to Rs. 10/- into a big financial help to needy as per Rules & Regulations in force and benefitted 443 members by digital help worth Rs. 2.56 crores to in just one and half year.",
-    },
+      ques: "How can I get involved or support Abhil Young Mind Growth Foundation's mission?",
+      ans: "You can get involved by volunteering, donating, or spreading awareness about our foundation's mission. Visit our ' Contact Us' section on the website for more information on how to support us",
+    }
   ];
 
   return (
@@ -93,9 +66,7 @@ const Faq = () => {
             Frequently Asked Questions
           </motion.h1>
           <p className="md:mx-[3rem] text-lg font-medium text-text_color1 py-6">
-            HIO Foundation FAQ answers questions about who we are, where we
-            work, how we save lives, when we respond to disasters and what you
-            can do to help.
+          Frequently Asked Questions: Find answers to common queries about our foundation's mission, services, and how we support the mental growth and well-being of young individuals. Explore these FAQs to better understand how we can help you lead a better and smarter life through improved mental health.
           </p>
         </div>
 

@@ -7,6 +7,7 @@ import { BiLocationPlus, BiPhoneCall, BiWorld } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
+import AbhilLogo from '../../assets/PageHeader/AbhilyoungMind.png';
 
 const Footer = () => {
   const { setActiveUrl } = useMyContext();
@@ -22,7 +23,7 @@ const Footer = () => {
     },
     {
       title: "Services",
-      path: "/services",
+      path: "/appointment",
     },
     {
       title: "FAQ",
@@ -41,7 +42,7 @@ const Footer = () => {
   const Services = [
     {
       title: "Individual Therapy",
-      path: "/",
+      path: "/appointment",
     },
     {
       title: "Family Counseling",
@@ -49,19 +50,19 @@ const Footer = () => {
     },
     {
       title: "Couples Therapy",
-      path: "/services",
+      path: "/appointment",
     },
     {
       title: "Children Therapy",
-      path: "/faq",
+      path: "/appointment",
     },
     {
       title: "Group Counselling",
-      path: "/aboutus",
+      path: "/appointment",
     },
     {
       title: "Career Counselling",
-      path: "/contactus",
+      path: "/appointment",
     },
   ];
 
@@ -88,7 +89,7 @@ const Footer = () => {
     {
       icon: <BiPhoneCall />,
       title: "Call Us",
-      content: "+915708458245",
+      content: "+91 8447308007",
     },
     {
       icon: <AiOutlineMail />,
@@ -103,7 +104,7 @@ const Footer = () => {
     {
       icon: <BiLocationPlus />,
       title: "Address",
-      content: "sfbsdf sndfs fnsd bf sd sdkhf asdfsdfdsc sdf",
+      content: "Plot No 184 Kh No 8/21/2, And 18/1/1 Sainik Enclave, Najafgarh, South West Delhi, New Delhi, Delhi, India, 110043",
     },
   ];
 
@@ -115,7 +116,7 @@ const Footer = () => {
           <div className="lg:w-[33%]">
             <Link to={"/"} onClick={() => setActiveUrl("/")}>
               <motion.img
-                src="https://gtkit.rometheme.pro/genical/wp-content/uploads/sites/18/2023/02/Genical-Logo-2.png"
+                src={AbhilLogo}
                 alt=""
                 className="h-[6rem] lg:h-[5rem] mb-6 opacity-0  -ml-3 "
                 {...AnimationData.slideRight}
@@ -128,10 +129,7 @@ const Footer = () => {
                 letterSpacing: "1px",
               }}
             >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
-              velit voluptates maiores incidunt harum molestias explicabo. Lorem
-              ipsum dolor sit amet consectetur, adipisicing elit. Nam velit
-              voluptates maiores incidunt harum molestias explicabo.
+              Nurturing Young Minds for a Brighter Tomorrow: Empowering Mental Well-being in Youth for a Smarter and Better Life.
             </p>
 
             {/* Social Media  */}
@@ -200,7 +198,7 @@ const Footer = () => {
             {/* Informartion  */}
             <div className="pb-6">
               <h1 className=" text-white text-2xl mb-5 font-medium ml-1">
-                Services
+                Contact Us
               </h1>
 
               {/* Contacts  */}
@@ -211,20 +209,20 @@ const Footer = () => {
                       {item.icon}
                     </span>
                     <div>
-                      <p className=" text-white break-all">{item.content}</p>
+                      <p className=" text-white">{item.content}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <h1 className=" text-white text-2xl mb-5 font-medium ml-1">
+              {/* <h1 className=" text-white text-2xl mb-5 font-medium ml-1">
                 Opening Hours
               </h1>
 
               <div className="text-white ml-1 ">
                 <p className="mb-2">Monday - Saturday ( 09.00 - 21.00 )</p>
                 <p>Sunday ( Closed )</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -232,7 +230,7 @@ const Footer = () => {
         {/* Copyright  */}
         <div className=" border-t-2  border-secondary_color ">
           <p className=" text-white text-center py-4">
-            Copyright 2023 © All Right Reserved Design by Achintya Solutions
+            Copyright 2023 © All Right Reserved By Abhil Young Mind Growth Foundation
           </p>
         </div>
       </div>
