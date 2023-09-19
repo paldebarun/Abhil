@@ -11,6 +11,7 @@ import MetaData from "../../utils/MetaData";
 import { AppintmentForm } from "../Appointment/Appointment";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
+import WelcomeDesk from "./WelcomeDesk";
 
 const Home = () => {
   return (
@@ -107,6 +108,9 @@ const Home = () => {
 
         {/* Why Choose */}
         <WhyChooseUs />
+
+        {/* Welcome  */}
+        <WelcomeDesk />
 
         {/* Experiance People  */}
         <ExperiencedPeople />
