@@ -14,6 +14,7 @@ import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import WelcomeDesk from "./WelcomeDesk";
+import AreasOfWork from "./AreasOfWork";
 
 const Home = () => {
   const { setActiveUrl } = useMyContext();
@@ -127,6 +128,9 @@ const Home = () => {
 
         {/* Welcome  */}
         <WelcomeDesk />
+
+        {/* Areas of Work  */}
+        <AreasOfWork />
 
         {/* Experiance People  */}
         <ExperiencedPeople />
