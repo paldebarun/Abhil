@@ -75,10 +75,9 @@ const Home = () => {
             </motion.div>
           </div>
         </div>
-
         <motion.div
           {...AnimationData.slideUp}
-          className=" flex flex-col md:flex-row flex gap-8 w-full px-5 lg:px-[4rem] xl:px-[6rem]  pb-[8rem] mt-[-6rem] sm:mt-[-8rem] "
+          className=" flex flex-col md:flex-row gap-8 w-full px-5 lg:px-[4rem] xl:px-[6rem]  pb-[8rem] mt-[-6rem] sm:mt-[-8rem] "
         >
           <div className="lg:w-1/3 text-center bg-secondary_color flex flex-col gap-2 items-center justify-center py-8 sm:py-14 px-6 rounded-l-[3rem] rounded-br-[3rem]">
             <span className=" text-6xl">
@@ -116,25 +115,18 @@ const Home = () => {
             </p>
           </div>
         </motion.div>
-
         {/* About  */}
         <About />
-
         {/* Community trust  */}
         <CommunityTrust />
-
         {/* Why Choose */}
         <WhyChooseUs />
-
         {/* Welcome  */}
         <WelcomeDesk />
-
         {/* Areas of Work  */}
         <AreasOfWork />
-
         {/* Experiance People  */}
         <ExperiencedPeople />
-
         {/* Appointment */}
         <AppintmentForm />
       </div>

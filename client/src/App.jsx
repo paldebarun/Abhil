@@ -10,6 +10,7 @@ import Faq from "./components/FAQ/Faq";
 import Appointment from "./components/Appointment/Appointment";
 import ScrollToTop from "./utils/ScrollToTop";
 import { Toaster } from "react-hot-toast";
+import Donation from "./components/Donation/Donation";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/appointment" element={<Appointment />} />
+        <Route path="/donation" element={<Donation />} />
       </Routes>
       <Footer />
       <ScrollToTop />

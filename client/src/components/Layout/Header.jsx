@@ -6,7 +6,7 @@ import { RiCloseFill } from "react-icons/ri";
 import { useMyContext } from "../../context/ActiveLinkContext";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
-import AbhilLogo from '../../assets/PageHeader/AbhilyoungMind.png';
+import AbhilLogo from "../../assets/PageHeader/AbhilyoungMind.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +31,10 @@ const Header = () => {
       path: "/appointment",
     },
     {
+      title: "Donation",
+      path: "/donation",
+    },
+    {
       title: "Contact Us",
       path: "/contactus",
     },
@@ -50,14 +54,14 @@ const Header = () => {
             <motion.img
               src={AbhilLogo}
               alt=""
-              className="h-[3.5rem] sm:h-[4rem] opacity-0"
+              className="h-[3rem] sm:h-[3.5rem] opacity-0"
               {...AnimationData.slideRight}
             />
           </Link>
         </div>
 
         {/* Nav Item  */}
-        <div className="hidden lg:flex gap-2 xl:gap-[2rem]  text-white transition-all ease-linear">
+        <div className="hidden lg:flex gap-2 xl:gap-[1.5rem]  text-white transition-all ease-linear">
           {NavLinks.map((item, index) => (
             <Link
               to={item.path}
@@ -75,14 +79,19 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Email Us  */}
-        <div className="hidden lg:flex  items-center gap-3">
-          <div className="text-5xl text-secondary_color">
+        {/* Call Us  */}
+        <div className="hidden lg:flex  items-center gap-1">
+          <div className="text-4xl text-secondary_color">
             <BiPhoneCall />
           </div>
-          <div className="">
-            <p className="text-white text-center text-lg font-semibold">Call Us</p>
-            <span className="text-lg text-secondary_color">  <a href="tel:+918447308007">+91 8447308007</a></span>
+          <div>
+            <p className="text-white text-center text-lg font-semibold">
+              Call Us
+            </p>
+            <span className=" text-secondary_color">
+              {" "}
+              <a href="tel:+918447308007">+91 8447308007</a>
+            </span>
           </div>
         </div>
 
@@ -98,7 +107,7 @@ const Header = () => {
       {/* NavPhone  */}
       <div
         className={`z-20 lg:h-0 absolute left-0 top-[100%]  bg-primary_color ${
-          menuOpen ? "h-[16rem] duration-300" : "h-0 duration-100"
+          menuOpen ? "h-[18rem] duration-300" : "h-0 duration-100"
         } w-[100%]   overflow-hidden  transition-min-h ease-linear `}
       >
         <div className="flex flex-col px-4 py-1 gap-2 h-[1005]  text-white transition-all ease-linear">

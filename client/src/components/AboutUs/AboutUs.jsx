@@ -74,7 +74,10 @@ export const About = () => {
               wordSpacing: "1px",
             }}
           >
-            We understand that your mental health is important. Our team of expert psychologists is dedicated to providing the guidance and support you need to navigate life's challenges. Rest assured, your privacy is our priority. 
+            We understand that your mental health is important. Our team of
+            expert psychologists is dedicated to providing the guidance and
+            support you need to navigate life's challenges. Rest assured, your
+            privacy is our priority.
           </p>
 
           <p
@@ -84,7 +87,8 @@ export const About = () => {
               wordSpacing: "1px",
             }}
           >
-            All interactions are strictly confidential, ensuring a safe and trusted space for you to discuss your concerns openly.
+            All interactions are strictly confidential, ensuring a safe and
+            trusted space for you to discuss your concerns openly.
           </p>
         </div>
 
@@ -95,7 +99,9 @@ export const About = () => {
             </div>
             <div>
               <h1 className="  text-2xl font-medium">Expert Psychologist</h1>
-              <p className="text-lg text-text_color1 ">Customized guidance from  experienced psychologists for well-being.
+              <p className="text-lg text-text_color1 ">
+                Customized guidance from experienced psychologists for
+                well-being.
               </p>
             </div>
           </div>
@@ -107,7 +113,7 @@ export const About = () => {
             <div>
               <h1 className="  text-2xl font-medium">Confidentiality</h1>
               <p className="text-lg text-text_color1 break-all">
-              Privacy assured, secure space for trust. 
+                Privacy assured, secure space for trust.
               </p>
             </div>
           </div>
@@ -115,7 +121,8 @@ export const About = () => {
 
         <div className="p-7 border-l-2 border-secondary_color rounded-tl-3xl">
           <p className=" font-[cursive] text-xl text-text_color1">
-            “Your mind is your most powerful asset; invest in its growth, and watch your life flourish”
+            “Your mind is your most powerful asset; invest in its growth, and
+            watch your life flourish”
           </p>
         </div>
       </div>
@@ -213,7 +220,10 @@ export const WhyChooseUs = () => {
               wordSpacing: "1px",
             }}
           >
-            At our foundation, we're deeply committed to the well-being of young individuals, with a primary focus on nurturing their mental health. We provide essential guidance and resources to empower young minds in their journey towards growth and resilience. 
+            At our foundation, we're deeply committed to the well-being of young
+            individuals, with a primary focus on nurturing their mental health.
+            We provide essential guidance and resources to empower young minds
+            in their journey towards growth and resilience.
           </p>
         </div>
 
@@ -357,7 +367,9 @@ export const ExperiencedPeople = () => {
             wordSpacing: "1px",
           }}
         >
-          Meet Our Expert Psychologists: Our dedicated team of experienced psychologists is here to support the mental growth and well-being of young individuals, fostering a brighter, smarter life.
+          Meet Our Expert Psychologists: Our dedicated team of experienced
+          psychologists is here to support the mental growth and well-being of
+          young individuals, fostering a brighter, smarter life.
         </p>
       </div>
 
