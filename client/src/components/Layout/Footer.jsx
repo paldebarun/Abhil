@@ -7,7 +7,7 @@ import { BiLocationPlus, BiPhoneCall, BiWorld } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
-import AbhilLogo from '../../assets/PageHeader/AbhilyoungMind.png';
+import AbhilLogo from "../../assets/PageHeader/AbhilyoungMind.png";
 
 const Footer = () => {
   const { setActiveUrl } = useMyContext();
@@ -22,12 +22,12 @@ const Footer = () => {
       path: "/appointment",
     },
     {
-      title: "Services",
-      path: "/appointment",
-    },
-    {
       title: "FAQ",
       path: "/faq",
+    },
+    {
+      title: "Donation",
+      path: "/donation",
     },
     {
       title: "About Us",
@@ -104,7 +104,8 @@ const Footer = () => {
     {
       icon: <BiLocationPlus />,
       title: "Address",
-      content: "Plot No 184 Kh No 8/21/2, And 18/1/1 Sainik Enclave, Najafgarh, South West Delhi, New Delhi, Delhi, India, 110043",
+      content:
+        "Plot No 184 Kh No 8/21/2, And 18/1/1 Sainik Enclave, Najafgarh, South West Delhi, New Delhi, Delhi, India, 110043",
     },
   ];
 
@@ -129,7 +130,8 @@ const Footer = () => {
                 letterSpacing: "1px",
               }}
             >
-              Nurturing Young Minds for a Brighter Tomorrow: Empowering Mental Well-being in Youth for a Smarter and Better Life.
+              Nurturing Young Minds for a Brighter Tomorrow: Empowering Mental
+              Well-being in Youth for a Smarter and Better Life.
             </p>
 
             {/* Social Media  */}
@@ -230,7 +232,8 @@ const Footer = () => {
         {/* Copyright  */}
         <div className=" border-t-2  border-secondary_color ">
           <p className=" text-white text-center py-4">
-            Copyright 2023 © All Right Reserved By Abhil Young Mind Growth Foundation
+            Copyright 2023 © All Right Reserved By Abhil Young Mind Growth
+            Foundation
           </p>
         </div>
       </div>
