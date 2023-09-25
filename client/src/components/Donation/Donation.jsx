@@ -4,9 +4,12 @@ import PageHeader from "../Layout/PageHeader";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
 import { PiHandshakeBold } from "react-icons/pi";
+import { MdOutlineClose } from "react-icons/md";
 
 const Donation = () => {
   const [showTab, setShowTab] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+
   const AmountTabs = [
     {
       amount: "₹800",
@@ -85,6 +88,45 @@ const Donation = () => {
     },
   ];
 
+  const Benefits = [
+    {
+      title: "ASSURANCE & TRANSPARENCY",
+      icon: <PiHandshakeBold />,
+      description:
+        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+    },
+    {
+      title: "ASSURANCE & TRANSPARENCY",
+      icon: <PiHandshakeBold />,
+      description:
+        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+    },
+    {
+      title: "ASSURANCE & TRANSPARENCY",
+      icon: <PiHandshakeBold />,
+      description:
+        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+    },
+  ];
+
+  const Membership = [
+    {
+      title: "ASSURANCE & TRANSPARENCY",
+      description:
+        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+    },
+    {
+      title: "ASSURANCE & TRANSPARENCY",
+      description:
+        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+    },
+    {
+      title: "ASSURANCE & TRANSPARENCY",
+      description:
+        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+    },
+  ];
+
   const donateSubmitHandler = () => {};
 
   return (
@@ -106,7 +148,10 @@ const Donation = () => {
       >
         <div className="h-full flex items-center justify-center sm:justify-start px-1 sm:px-5 lg:px-[4rem] xl:px-[8rem]">
           {/* Donatation Box  */}
-          <div className="bg-white py-4 px-3 rounded-lg shadow-xl ">
+          <motion.div
+            className="bg-white py-4 px-3 rounded-lg shadow-xl"
+            {...AnimationData.slideRight}
+          >
             {/* Heading  */}
             <div>
               <h1 className="text-4xl font-bold">MAKE A</h1>
@@ -137,11 +182,33 @@ const Donation = () => {
               </div>
 
               {/* Next Button  */}
-              <button className="bg-secondary_color w-full py-3 my-4 text-xl font-bold hover:bg-transparent border-2 border-secondary_color transition-all duration-300">
+              <button
+                onClick={() => setShowPopup(true)}
+                className="bg-secondary_color w-full py-3 my-4 text-xl font-bold hover:bg-transparent border-2 border-secondary_color transition-all duration-300"
+              >
                 NEXT
               </button>
             </div>
-          </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Donation Dialog Box Popup  */}
+      <div
+        className={`fixed z-10 top-0 w-full h-full bg-black bg-opacity-50 overflow-auto ${
+          showPopup ? "block opacity-100" : "hidden opacity-0"
+        } transition-all duration-300`}
+        onClick={() => setShowPopup(false)}
+      >
+        <div className="h-[80%] w-[80%] m-auto mt-20 bg-white shadow-xl rounded-sm py-4 px-6 relative">
+          <figure
+            className="text-white text-3xl absolute top-0 -right-10 cursor-pointer hover:scale-125 transition-all duration-300"
+            onClick={() => setShowPopup(false)}
+          >
+            <MdOutlineClose />
+          </figure>
+
+          <div>Payment Verfication Content</div>
         </div>
       </div>
 
@@ -179,48 +246,19 @@ const Donation = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-300">
-          <div className=" text-center shadow-xl rounded-xl overflow-hidden">
-            <div>
-              <h1 className=" bg-secondary_color text-white font-bold text-lg p-2">
-                ASSURANCE & TRANSPARENCY
-              </h1>
+          {Benefits.map((item, index) => (
+            <div className=" text-center shadow-xl rounded-xl overflow-hidden">
+              <div>
+                <h1 className="bg-primary_color text-white font-bold text-lg p-2">
+                  {item.title}
+                </h1>
+              </div>
+              <figure className="text-[12rem] text-secondary_color grid place-items-center">
+                {item.icon}
+              </figure>
+              <p className=" pb-10 px-4">{item.description}</p>
             </div>
-            <figure className="text-[12rem] text-secondary_color grid place-items-center">
-              <PiHandshakeBold />
-            </figure>
-            <p className=" pb-10 px-4">
-              Our regular updates will keep you informed and assured that your
-              donation is actually helping children across India.
-            </p>
-          </div>
-          <div className=" text-center shadow-xl rounded-xl overflow-hidden">
-            <div>
-              <h1 className=" bg-secondary_color text-white font-bold text-lg p-2">
-                ASSURANCE & TRANSPARENCY
-              </h1>
-            </div>
-            <figure className="text-[12rem] text-secondary_color grid place-items-center">
-              <PiHandshakeBold />
-            </figure>
-            <p className=" pb-10 px-4">
-              Our regular updates will keep you informed and assured that your
-              donation is actually helping children across India.
-            </p>
-          </div>
-          <div className=" text-center shadow-xl rounded-xl overflow-hidden">
-            <div>
-              <h1 className=" bg-secondary_color text-white font-bold text-lg p-2">
-                ASSURANCE & TRANSPARENCY
-              </h1>
-            </div>
-            <figure className="text-[12rem] text-secondary_color grid place-items-center">
-              <PiHandshakeBold />
-            </figure>
-            <p className=" pb-10 px-4">
-              Our regular updates will keep you informed and assured that your
-              donation is actually helping children across India.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -242,42 +280,17 @@ const Donation = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-300">
-          <div className=" text-center shadow-xl rounded-xl overflow-hidden">
-            <div>
-              <h1 className=" bg-secondary_color text-white font-bold text-lg p-2">
-                FLEXIBLE AMOUNT
-              </h1>
-            </div>
+          {Membership.map((item, index) => (
+            <div className=" text-center shadow-xl rounded-xl overflow-hidden">
+              <div>
+                <h1 className=" bg-primary_color text-white font-bold text-lg p-2">
+                  {item.title}
+                </h1>
+              </div>
 
-            <p className=" py-10 px-4">
-              Our regular updates will keep you informed and assured that your
-              donation is actually helping children across India.
-            </p>
-          </div>
-          <div className=" text-center shadow-xl rounded-xl overflow-hidden">
-            <div>
-              <h1 className="bg-secondary_color text-white font-bold text-lg p-2">
-                FLEXIBLE DURATION
-              </h1>
+              <p className=" py-10 px-4">{item.description}</p>
             </div>
-
-            <p className=" py-10 px-4">
-              Our regular updates will keep you informed and assured that your
-              donation is actually helping children across India.
-            </p>
-          </div>
-          <div className=" text-center shadow-xl rounded-xl overflow-hidden">
-            <div>
-              <h1 className=" bg-secondary_color text-white font-bold text-lg p-2">
-                FLEXIBLE PAYMENT
-              </h1>
-            </div>
-
-            <p className=" py-10 px-4">
-              Our regular updates will keep you informed and assured that your
-              donation is actually helping children across India.
-            </p>
-          </div>
+          ))}
         </div>
 
         <button className="bg-secondary_color px-16 py-3 mt-10 text-xl font-bold hover:bg-transparent border-2 border-secondary_color transition-all duration-300 rounded-xl text-white hover:text-black ">
