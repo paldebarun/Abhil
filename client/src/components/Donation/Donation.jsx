@@ -5,6 +5,10 @@ import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
 import { PiHandshakeBold } from "react-icons/pi";
 import { MdOutlineClose } from "react-icons/md";
+import Family  from "../../assets/Donations/Family.jpg";
+import Assuarance from "../../assets/Donations/Assurance.jpg";
+import Part from "../../assets/Donations/PartsofCommunity.jpg";
+ 
 
 const Donation = () => {
   const [showTab, setShowTab] = useState(0);
@@ -91,39 +95,39 @@ const Donation = () => {
   const Benefits = [
     {
       title: "ASSURANCE & TRANSPARENCY",
-      icon: <PiHandshakeBold />,
+      icon:  Assuarance ,
       description:
-        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+        "Our foundation's unwavering commitment to assurance and transparency builds trust, ensuring a brighter future for young minds we empower.",
     },
     {
-      title: "ASSURANCE & TRANSPARENCY",
-      icon: <PiHandshakeBold />,
+      title: "A Family of Changemakers",
+      icon:Family ,
       description:
-        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+        "A united family, dedicated changemakers, nurturing young minds, fostering a brighter tomorrow, together making a difference.",
     },
     {
-      title: "ASSURANCE & TRANSPARENCY",
-      icon: <PiHandshakeBold />,
+      title: "Part of Community",
+      icon: Part,
       description:
-        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+      "We are part of a vibrant community, working together to empower young minds and create positive change.",
     },
   ];
 
   const Membership = [
     {
-      title: "ASSURANCE & TRANSPARENCY",
+      title: "Flexible Amount",
       description:
-        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+      "Membership offers flexibility, allowing you to contribute any amount to support our mission empowering young minds.",
     },
     {
-      title: "ASSURANCE & TRANSPARENCY",
+      title: "Flexible Duration",
       description:
-        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+      "Choose your membership duration, ensuring flexibility and alignment with your commitment to empowering young minds.",
     },
     {
-      title: "ASSURANCE & TRANSPARENCY",
+      title: "Flexible Payment",
       description:
-        "Our regular updates will keep you informed and assured that your donation is actually helping children across India",
+      "Membership offers flexible payment options, making it easy for you to support our mission of empowering young minds.",
     },
   ];
 
@@ -218,7 +222,7 @@ const Donation = () => {
         className="w-[95%] sm:w-[80%] lg:w-[65%] m-auto bg-white -mt-10 py-[4rem] px-10 shadow-lg rounded-xl mb-[8rem]"
       >
         <p className=" text-center">
-          <span className=" text-lg font-bold">UNICEF Donor Family</span> is a
+          <span className=" text-lg font-bold">Abhil Young Mind Donor Family</span> is a
           family of changemakers who believe we can help{" "}
           <span className=" text-lg font-bold">children thrive and grow</span>{" "}
           to their full potential when{" "}
@@ -253,9 +257,10 @@ const Donation = () => {
                   {item.title}
                 </h1>
               </div>
-              <figure className="text-[12rem] text-secondary_color grid place-items-center">
+              {/* <figure className="text-[12rem] text-secondary_color grid place-items-center">
                 {item.icon}
-              </figure>
+              </figure> */}
+              <img src={item.icon} className="text-[12rem] display-flex justify-content-center  pb-10 text-secondary_color grid place-items-center"></img>
               <p className=" pb-10 px-4">{item.description}</p>
             </div>
           ))}

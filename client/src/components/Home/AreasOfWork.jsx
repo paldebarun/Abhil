@@ -1,5 +1,13 @@
 import React from "react";
 import { AnimationData } from "../../utils/animationData";
+import PreventiveHealthcare from "../../assets/AreasOfWork/PreHealth.jpg";
+import Education from "../../assets/AreasOfWork/Education.jpg";
+import Livelihood from "../../assets/AreasOfWork/Livelihood.jpg";
+import DigitalTransformation from "../../assets/AreasOfWork/DigitalTransformation.jpg";
+import SkillDevelopment from "../../assets/AreasOfWork/SkillDevelopment.jpg";
+import ArtsAndCulture from "../../assets/AreasOfWork/ArtsAndCulture.png";
+import EnergyandEnvironment from "../../assets/AreasOfWork/EnergyandEnvironment.jpg";
+import Health from "../../assets/AreasOfWork/Health.png";
 import {
   animate,
   motion,
@@ -13,56 +21,56 @@ const AreasOfWork = () => {
   const areaOfWorkData = [
     {
       image:
-        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/10/Web_72DPI-20181123-WeWork-Embassy-Tech-Village-Common-Areas-Wide-2_v1-800x533.jpg",
+      PreventiveHealthcare,
       icon: <FaPeopleArrows />,
       work: "Preventive Healthcare",
       bgColor: "bg-[#ef4444]",
     },
     {
       image:
-        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/10/Web_72DPI-20181123-WeWork-Embassy-Tech-Village-Common-Areas-Wide-2_v1-800x533.jpg",
+      Education,
       icon: <FaPeopleArrows />,
       work: "Education",
       bgColor: "bg-[#f59e0b]",
     },
     {
       image:
-        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/10/Web_72DPI-20181123-WeWork-Embassy-Tech-Village-Common-Areas-Wide-2_v1-800x533.jpg",
+      Livelihood,
       icon: <FaPeopleArrows />,
       work: "Livelihood",
       bgColor: "bg-[#be123c]",
     },
     {
       image:
-        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/10/Web_72DPI-20181123-WeWork-Embassy-Tech-Village-Common-Areas-Wide-2_v1-800x533.jpg",
+      DigitalTransformation,
       icon: <FaPeopleArrows />,
       work: "Digital Transformation",
       bgColor: "bg-[#c026d3]",
     },
     {
       image:
-        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/10/Web_72DPI-20181123-WeWork-Embassy-Tech-Village-Common-Areas-Wide-2_v1-800x533.jpg",
+      SkillDevelopment,
       icon: <FaPeopleArrows />,
       work: "Skill Development",
       bgColor: "bg-[#2563eb]",
     },
     {
       image:
-        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/10/Web_72DPI-20181123-WeWork-Embassy-Tech-Village-Common-Areas-Wide-2_v1-800x533.jpg",
+      ArtsAndCulture,
       icon: <FaPeopleArrows />,
       work: "Arts And Culture",
       bgColor: "bg-[#db2777]",
     },
     {
       image:
-        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/10/Web_72DPI-20181123-WeWork-Embassy-Tech-Village-Common-Areas-Wide-2_v1-800x533.jpg",
+      EnergyandEnvironment,
       icon: <FaPeopleArrows />,
-      work: "Energy adn Environment",
+      work: "Energy and Environment",
       bgColor: "bg-[#57534e]",
     },
     {
       image:
-        "https://www.wework.com/ideas/wp-content/uploads/sites/4/2019/10/Web_72DPI-20181123-WeWork-Embassy-Tech-Village-Common-Areas-Wide-2_v1-800x533.jpg",
+      Health,
       icon: <FaPeopleArrows />,
       work: "Health",
       bgColor: "bg-[#06b6d4]",

@@ -41,7 +41,7 @@ const Home = () => {
               {...AnimationData.slidDown}
               className=" text-white text-2xl sm:text-3xl font-[cursive] "
             >
-              Welocme to Abhil Young Mind
+              Welcome to Abhil Young Mind
             </motion.h3>
 
             <motion.h1
@@ -56,10 +56,7 @@ const Home = () => {
               {...AnimationData.slideRightDelay}
               className="md:w-[50%] text-center  text-white text-lg"
             >
-              Welcome to our website, where we're dedicated to nurturing the
-              psychological well-being of young individuals, providing guidance
-              to break free from destructive habits, and paving the way for a
-              brighter and more promising future.
+              "Welcome to our educational facility's website, where we're devoted to nurturing the psychological well-being of young individuals, guiding them to overcome destructive habits, and lighting the path towards a brighter, promising future."
             </motion.p>
 
             <motion.div {...AnimationData.slideUpDelay}>
@@ -68,8 +65,8 @@ const Home = () => {
                 onClick={() => setActiveUrl("/appointment")}
               >
                 {" "}
-                <button className="px-3 py-4 mt-6 font-semibold text-white bg-transparent border-2 border-secondary_color  rounded-b-2xl rounded-tl-2xl hover:bg-secondary_color  transition-all duration-300">
-                  Make An Appointment
+                <button className="px-3 py-4 mt-6 font-bold text-white bg-transparent border-2 border-secondary_color  rounded-b-2xl rounded-tl-2xl hover:bg-secondary_color  transition-all duration-300">
+                  Let's Connect
                 </button>{" "}
               </Link>
             </motion.div>

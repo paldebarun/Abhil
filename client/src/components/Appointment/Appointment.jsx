@@ -39,12 +39,12 @@ export const AppintmentForm = () => {
   const contactDetails = [
     {
       icon: <FaUserSecret />,
-      title: "Customeer Service",
+      title: "Customer Service",
       content: "+91 8447308007",
     },
     {
       icon: <FaRegAddressBook />,
-      title: "Clinic Address",
+      title:  " Address",
       content: "Plot No 184 Kh No 8/21/2, And 18/1/1 Sainik Enclave, Najafgarh, South West Delhi, New Delhi, Delhi, India, 110043",
     },
     {

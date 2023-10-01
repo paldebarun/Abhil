@@ -1,4 +1,8 @@
 import React from "react";
+import FounderImage from "../../assets/WelcomeDesk/image.jpeg";
+import What from "../../assets/WelcomeDesk/what.jpg"
+import Why from "../../assets/WelcomeDesk/why.jpg"
+import Who from "../../assets/WelcomeDesk/who.jpg"
 import { AnimationData } from "../../utils/animationData";
 import {
   animate,
@@ -11,22 +15,22 @@ import {
 const WelcomeDesk = () => {
   const welcomeData = [
     {
-      icon: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      icon: Who,
       title1: "Who",
       title2: "We Are",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis modi impedit exercitationem distinctio aspernatur deleniti ab suscipit repellendus quam tempora sint animi est tenetur ut aliquid consequatur, enim voluptas at!",
+      text: "Abhil Young Mind Foundation is a passionate community dedicated to nurturing young minds psychological well-being, offering guidance, and empowering them through education for a brighter future.",
     },
     {
-      icon: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
-      title1: "Who",
-      title2: "We Are",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis modi impedit exercitationem distinctio aspernatur deleniti ab suscipit repellendus quam tempora sint animi est tenetur ut aliquid consequatur, enim voluptas at!",
+      icon: What,
+      title1: "What",
+      title2: "We Do",
+      text: "We prioritize the psychological well-being of youth, offering counseling and support. We provide guidance to break free from destructive habits and empower through education for a promising future.",
     },
     {
-      icon: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
-      title1: "Who",
-      title2: "We Are",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis modi impedit exercitationem distinctio aspernatur deleniti ab suscipit repellendus quam tempora sint animi est tenetur ut aliquid consequatur, enim voluptas at!",
+      icon: Why,
+      title1: "Why",
+      title2: "We Do It",
+      text: "We believe in empowering young minds because their potential is our future. By nurturing well-being, providing guidance, and offering education, we pave the way for a brighter tomorrow.",
     },
   ];
   return (
@@ -84,19 +88,17 @@ const WelcomeDesk = () => {
       >
         <div className="w-[16rem] h-[16rem] p-2">
           <img
-            src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+            src={FounderImage}
             alt="owner"
             className="rounded-full w-full h-full object-cover"
           />
         </div>
 
         <div className=" text-center">
-          <h1 className="text-2xl font-semibold mb-2">Dr. Jagdish Pareek</h1>
+          <h1 className="text-2xl font-semibold mb-2">Dr. Karam Chand</h1>
           <p className=" text-gray-500 text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-            ipsam dignissimos recusandae velit earum, sequi laboriosam, id sunt
-            necessitatibus non repellendus molestias officiis! Dolorum atque
-            voluptates soluta, vero laborum delectus.
+          Meet Karam Chand, Director of Abhil Young Mind Foundation,is a Neuroscience  dedicated to empowering youth through education and fostering positive change. A visionary shaping tomorrow's leaders.
+
           </p>
         </div>
       </motion.div>
