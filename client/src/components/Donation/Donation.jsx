@@ -5,10 +5,15 @@ import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
 import { PiHandshakeBold } from "react-icons/pi";
 import { MdOutlineClose } from "react-icons/md";
-import Family  from "../../assets/Donations/Family.jpg";
+import Family from "../../assets/Donations/Family.jpg";
 import Assuarance from "../../assets/Donations/Assurance.jpg";
 import Part from "../../assets/Donations/PartsofCommunity.jpg";
- 
+import Map from "../../assets/Donations/map.png";
+import SaveTax from "../../assets/Donations/Donate_save_tax1.png";
+import DonatationHelp from "./DonationHelp";
+import DonationImpact from "./DonationImpact";
+import DonationFaq from "./DonationFaq";
+import DonorTestimonials from "./DonorTestimonials";
 
 const Donation = () => {
   const [showTab, setShowTab] = useState(0);
@@ -95,13 +100,13 @@ const Donation = () => {
   const Benefits = [
     {
       title: "ASSURANCE & TRANSPARENCY",
-      icon:  Assuarance ,
+      icon: Assuarance,
       description:
         "Our foundation's unwavering commitment to assurance and transparency builds trust, ensuring a brighter future for young minds we empower.",
     },
     {
       title: "A Family of Changemakers",
-      icon:Family ,
+      icon: Family,
       description:
         "A united family, dedicated changemakers, nurturing young minds, fostering a brighter tomorrow, together making a difference.",
     },
@@ -109,7 +114,7 @@ const Donation = () => {
       title: "Part of Community",
       icon: Part,
       description:
-      "We are part of a vibrant community, working together to empower young minds and create positive change.",
+        "We are part of a vibrant community, working together to empower young minds and create positive change.",
     },
   ];
 
@@ -117,17 +122,17 @@ const Donation = () => {
     {
       title: "Flexible Amount",
       description:
-      "Membership offers flexibility, allowing you to contribute any amount to support our mission empowering young minds.",
+        "Membership offers flexibility, allowing you to contribute any amount to support our mission empowering young minds.",
     },
     {
       title: "Flexible Duration",
       description:
-      "Choose your membership duration, ensuring flexibility and alignment with your commitment to empowering young minds.",
+        "Choose your membership duration, ensuring flexibility and alignment with your commitment to empowering young minds.",
     },
     {
       title: "Flexible Payment",
       description:
-      "Membership offers flexible payment options, making it easy for you to support our mission of empowering young minds.",
+        "Membership offers flexible payment options, making it easy for you to support our mission of empowering young minds.",
     },
   ];
 
@@ -139,7 +144,7 @@ const Donation = () => {
       <MetaData title={"Donate Now"} />
 
       {/* PageHeader  */}
-      <PageHeader title1={"Donate"} title2={"Now"} />
+      {/* <PageHeader title1={"Donate"} title2={"Now"} /> */}
 
       {/* Donation Content Componet */}
       <div
@@ -222,8 +227,10 @@ const Donation = () => {
         className="w-[95%] sm:w-[80%] lg:w-[65%] m-auto bg-white -mt-10 py-[4rem] px-10 shadow-lg rounded-xl mb-[8rem]"
       >
         <p className=" text-center">
-          <span className=" text-lg font-bold">Abhil Young Mind Donor Family</span> is a
-          family of changemakers who believe we can help{" "}
+          <span className=" text-lg font-bold">
+            Abhil Young Mind Donor Family
+          </span>{" "}
+          is a family of changemakers who believe we can help{" "}
           <span className=" text-lg font-bold">children thrive and grow</span>{" "}
           to their full potential when{" "}
           <span className=" text-lg font-bold">
@@ -232,76 +239,165 @@ const Donation = () => {
         </p>
       </motion.div>
 
-      {/* MEMBERSHIP   */}
-      <div className="w-full  px-5 lg:px-[4rem] xl:px-[6rem] mb-[8rem] transition-all duration-300">
-        <div>
-          <h3 className="font-[cursive] text-secondary_color text-xl  my-4">
-            Benefits?
-          </h3>
-        </div>
+      {/* Donation impact start  */}
 
-        <div>
-          <motion.h1
-            {...AnimationData.slideUp}
-            className="opacity-0 font-medium text-3xl lg:text-5xl my-6"
-          >
-            BENEFITS OF JOINING OUR DONOR FAMILY
-          </motion.h1>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-300">
-          {Benefits.map((item, index) => (
-            <div className=" text-center shadow-xl rounded-xl overflow-hidden">
-              <div>
-                <h1 className="bg-primary_color text-white font-bold text-lg p-2">
-                  {item.title}
-                </h1>
-              </div>
-              {/* <figure className="text-[12rem] text-secondary_color grid place-items-center">
-                {item.icon}
-              </figure> */}
-              <img src={item.icon} className="text-[12rem] display-flex justify-content-center  pb-10 text-secondary_color grid place-items-center"></img>
-              <p className=" pb-10 px-4">{item.description}</p>
+      <div class="p-4 md:p-8">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 mt-5 md:mt-0 p-4 md:p-10">
+            <motion.h2
+              {...AnimationData.slideRight}
+              class="text-2xl md:text-4xl font-bold uppercase"
+            >
+              "You make a living by what you get, You make a life by what you
+              give."
+            </motion.h2>
+            <div class="text-xl md:text-2xl pt-4 md:pt-20">
+              Even a small donation is a big help for someone in need and can
+              provide long lasting support to underserved communities. Smile
+              Foundation works to provide better lives to vulnerable children
+              and families, and our work is completely dependent on the generous
+              contributions made by socially committed and responsible
+              individuals.
             </div>
-          ))}
+          </div>
+          <div class="md:w-1/2">
+            <motion.img
+              {...AnimationData.slideLeft}
+              src={Map}
+              alt="India illustration"
+              class="w-full md:w-auto h-auto pl-4 md:pl-10"
+            />
+          </div>
+        </div>
+        <motion.h2
+          {...AnimationData.slideRight}
+          class="text-2xl md:text-4xl font-bold mt-4 md:mt-8 pl-4 md:pl-10"
+        >
+          Our Impact Last Year
+        </motion.h2>
+        <DonationImpact />
+      </div>
+      {/* Donation impact End  */}
+
+      {/* Donate and save tax End */}
+
+      <div class="p-4 md:p-8">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-3/5">
+            <motion.h2
+              {...AnimationData.slideRight}
+              class="text-2xl md:text-4xl font-bold pb-2 md:pb-4"
+            >
+              DONATE & SAVE TAX
+            </motion.h2>
+            <p class="text-xl md:text-2xl mt-2 md:mt-4 font-500">
+              When you make a donation under Section 80G to Smile Foundation,
+              you can claim a tax deduction on the donated amount. This reduces
+              your overall taxable income, and you end up paying less in income
+              tax. We are registered under Section 12A (a) of the Income Tax
+              Act, 1961 and the Indian Trusts Act, 1882.
+            </p>
+            <ul class="text-xl md:text-2xl font-semibold mt-2 md:mt-4 list-none mb-2 md:mb-4">
+              <li class="relative">
+                <div class="before:absolute before:content-[''] before:w-3 before:h-3 before:bg-green-500 before:rounded-full before:left-[-24px] before:top-5"></div>
+                Make a donation online through this donation page
+              </li>
+              <li class="relative">
+                <div class="after:absolute after:content-[''] after:w-3/5 after:bg-green-500 after:h-1"></div>
+              </li>
+              <li class="relative">
+                <div class="before:absolute before:content-[''] before:w-3 before:h-3 before:bg-green-500 before:rounded-full before:left-[-24px] before:top-5"></div>
+                Smile Foundation will provide you with a tax-exempt certificate
+                after the donation is made (by 31st May of the next financial
+                year)
+              </li>
+              <li class="relative">
+                <div class="after:absolute after:content-[''] after:w-3/5 after:bg-green-500 after:h-1"></div>
+              </li>
+              <li class="relative">
+                <div class="before:absolute before:content-[''] before:w-3 before:h-3 before:bg-green-500 before:rounded-full before:left-[-24px] before:top-5"></div>
+                Use the provided certificate when filing your income tax return
+                to claim the tax deduction under Section 80G
+              </li>
+              <li class="relative">
+                <div class="after:absolute after:content-[''] after:w-3/5 after:bg-green-500 after:h-1"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-2/5 mt-4 md:mt-0">
+            <motion.img
+              {...AnimationData.slideLeft}
+              src={SaveTax}
+              alt="Donate and save tax"
+              class="w-full h-auto"
+            />
+          </div>
         </div>
       </div>
 
-      {/* BENEFITS   */}
-      <div className="w-full  px-5 lg:px-[4rem] xl:px-[6rem] mb-[8rem] transition-all duration-300">
-        <div>
-          <h3 className="font-[cursive] text-secondary_color text-xl  my-4">
-            Why take Membership?
-          </h3>
+      {/* Donate and save tax End */}
+
+      {/* How Donation Help start*/}
+      <div className="p-8">
+        <motion.h2
+          {...AnimationData.slideRight}
+          className="text-4xl font-bold pb-4 pl-5"
+        >
+          HOW WILL YOUR DONATION HELP?
+        </motion.h2>
+        <div className="flex flex-wrap items-center justify-center pt-5">
+          <DonatationHelp />
         </div>
-
-        <div>
-          <motion.h1
-            {...AnimationData.slideUp}
-            className="opacity-0 font-medium text-3xl lg:text-5xl my-6"
-          >
-            FLEXIBILITY ON YOUR MEMBERSHIP
-          </motion.h1>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 transition-all duration-300">
-          {Membership.map((item, index) => (
-            <div className=" text-center shadow-xl rounded-xl overflow-hidden">
-              <div>
-                <h1 className=" bg-primary_color text-white font-bold text-lg p-2">
-                  {item.title}
-                </h1>
-              </div>
-
-              <p className=" py-10 px-4">{item.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <button className="bg-secondary_color px-16 py-3 mt-10 text-xl font-bold hover:bg-transparent border-2 border-secondary_color transition-all duration-300 rounded-xl text-white hover:text-black ">
-          NEXT
-        </button>
       </div>
+      {/* How Donation Help End*/}
+
+      {/* About Foundation Start */}
+      <div className="p-8">
+        <motion.h2
+          {...AnimationData.slideRight}
+          className=" text-4xl font-bold pb-4 pl-5 uppercase"
+        >
+          ABOUT SMILE FOUNDATION
+        </motion.h2>
+        <div className="p-5">
+          <p className=" text-lg font-medium leading-7">
+            Started in 2002, Smile Foundation is an Indian development
+            organisation that works with children and their families to provide
+            access to quality education, primary healthcare and livelihood
+            opportunities. We have over 400 projects, spread over 2000 villages
+            and slums in 25 states of the country.{" "}
+          </p>
+          <p className=" text-lg font-medium leading-7">
+            {" "}
+            Smile Foundation acts as a catalyst in the cycle of change,
+            complementing and supplementing government efforts towards achieving
+            the Sustainable Development Goals (SDGs). We collaborate, sensitize
+            and partner with like-minded institutions and individuals to
+            implement high-impact programmes. The focus is to enable access,
+            enhance quality and bring long-term behavioral change to
+            communities, especially at the grassroots.
+          </p>
+        </div>
+      </div>
+      {/* About Foundation End */}
+
+      {/* Testimonial Start */}
+      <div className="p-8">
+        <motion.h2
+          {...AnimationData.slideRight}
+          className=" text-4xl font-bold pb-10 pl-5 uppercase"
+        >
+          DONOR TESTIMONIALS
+        </motion.h2>
+        <DonorTestimonials />
+      </div>
+      {/* Testimonial End */}
+
+      {/* FAQs Start */}
+      <div className="px-4 lg:mx-auto lg:w-[55rem] py-[5rem] ">
+        <DonationFaq />
+      </div>
+      {/* FAQs Start */}
     </div>
   );
 };
