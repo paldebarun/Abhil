@@ -1,8 +1,6 @@
 import express from "express";
-import Razorpay from "razorpay";
 import { sendMessage } from "../controllers/sendMessage.js";
 import { appoinment } from "../controllers/appointment.js";
-import app from "../app.js";
 import { router as paymentRouter } from "./payment.js";
 
 const router = express.Router();

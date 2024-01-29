@@ -43,7 +43,7 @@ export const instance = new Razorpay({
   key_id: process.env.KEY_ID,
   key_secret: process.env.MERCHANT_ID,
 });
-console.log(instance);
+
 
 app.use(express.json());
 app.use(express.urlencoded({ credentials: true }));
