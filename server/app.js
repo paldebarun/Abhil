@@ -1,10 +1,12 @@
 import express from "express";
-import { config } from "dotenv";
+import dotenv from "dotenv";
+import Razorpay from "razorpay";
 import ErrorMiddleware from "./middlewares/error.js";
 import { connectDB } from "./data/database.js";
 import router from "./routes/routes.js";
 import cors from "cors";
-config({
+
+dotenv.config({
   path: "./data/config.env",
 });
 
@@ -32,6 +34,19 @@ app.get("/api/v1", (req, res, next) => {
 });
 
 app.use("/api/v1", router);
+
+app.get("/api/v1/getkey", (req, res) => {
+  res.status(200).json({ key1: process.env.KEY_ID });
+});
+
+export const instance = new Razorpay({
+  key_id: process.env.KEY_ID,
+  key_secret: process.env.MERCHANT_ID,
+});
+console.log(instance);
+
+app.use(express.json());
+app.use(express.urlencoded({ credentials: true }));
 
 export default app;
 

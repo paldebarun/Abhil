@@ -3,8 +3,6 @@ import Impact2 from "../../assets/Donations/map_impact_img_2.png";
 import Impact3 from "../../assets/Donations/map_impact_img_3.png";
 import Impact4 from "../../assets/Donations/map_impact_img_4.png";
 import Impact5 from "../../assets/Donations/map_impact_img_5.png";
-import { AnimationData } from "../../utils/animationData";
-import { motion } from "framer-motion";
 
 const DonationImpact = () => {
   const ImpactData = [
@@ -39,13 +37,13 @@ const DonationImpact = () => {
   ];
   return (
     <>
-      <div class="flex justify-center items-center p-4 flex-col lg:flex-row flex-wrap sm:flex-no-wrap md:flex-wrap">
+      <div className="flex justify-center items-center p-4 flex-col lg:flex-row flex-wrap sm:flex-no-wrap md:flex-wrap">
         {ImpactData.map((item, index) => (
-          <div class="block max-w-xs p-1 mb-5 sm:flex" key={index}>
+          <div className="block max-w-xs p-1 mb-5 sm:flex" key={index}>
             <img className="w-40 h-40" src={item.src} alt="icon" />
             <div className="block mt-4">
-              <h2 class="text-2xl ml-1 font-bold mb-2">{item.Heading}</h2>
-              <p class="text-xl ml-1 mb-2">{item.SubHeading}</p>
+              <h2 className="text-2xl ml-1 font-bold mb-2">{item.Heading}</h2>
+              <p className="text-xl ml-1 mb-2">{item.SubHeading}</p>
             </div>
           </div>
         ))}

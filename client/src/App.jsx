@@ -11,6 +11,7 @@ import Appointment from "./components/Appointment/Appointment";
 import ScrollToTop from "./utils/ScrollToTop";
 import { Toaster } from "react-hot-toast";
 import Donation from "./components/Donation/Donation";
+import PaymentSuccess from "./components/Donation/PaymentSuccess";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/faq" element={<Faq />} />
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/donation" element={<Donation />} />
+        <Route path="/paymentsuccess" element={<PaymentSuccess />} />
       </Routes>
       <Footer />
       <ScrollToTop />

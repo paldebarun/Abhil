@@ -53,10 +53,10 @@ const DonatationHelp = () => {
   return (
     <>
       {DonationData.map((item, index) => (
-        <div class="max-w-md p-1 mb-5" key={index}>
+        <div className="max-w-md p-1 mb-5" key={index}>
           <img className="w-full mb-2" src={item.imgScr} alt={item.alt} />
           <div>
-            <h2 class="text-2xl text-center font-bold mb-2">{item.dtitle}</h2>
+            <h2 className="text-2xl text-center font-bold mb-2">{item.dtitle}</h2>
           </div>
         </div>
       ))}
