@@ -1,5 +1,5 @@
-import Testimonial1 from "../../assets/Donations/Testimonial1.png";
-import Testimonial2 from "../../assets/Donations/Testimonial2.png";
+import Testimonial1 from "../../assets/Donations/testimonial1.png";
+import Testimonial2 from "../../assets/Donations/testimonial2.png";
 import { BiSolidQuoteRight } from "react-icons/bi";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";

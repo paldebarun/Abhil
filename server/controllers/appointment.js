@@ -1,4 +1,4 @@
-import { AppoinmentModel } from "../models/Appoinment.js";
+import { AppoinmentModel } from "../models/appoinment.js";
 import ErrorHandler from "../utils/errorHandler.js";
 
 export const appoinment = async (req, res, next) => {
