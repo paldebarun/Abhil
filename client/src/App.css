@@ -10,5 +10,24 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
+
+.desktopView {
+  background-image: url("./assets/Donations/bg--2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .desktopView{
+    background-image: url("./assets/Donations/bg-1.png");
+  }
+}
+
+
+/* .mobileView {
+  background-image: url("./assets/Donations/bg-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */

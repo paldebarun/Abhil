@@ -37,13 +37,13 @@ const DonationImpact = () => {
   ];
   return (
     <>
-      <div className="flex justify-center items-center p-4 flex-col lg:flex-row flex-wrap sm:flex-no-wrap md:flex-wrap">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-8 my-3 md:my-6">
         {ImpactData.map((item, index) => (
-          <div className="block max-w-xs p-1 mb-5 sm:flex" key={index}>
-            <img className="w-40 h-40" src={item.src} alt="icon" />
-            <div className="block mt-4">
-              <h2 className="text-2xl ml-1 font-bold mb-2">{item.Heading}</h2>
-              <p className="text-xl ml-1 mb-2">{item.SubHeading}</p>
+          <div className="w-md sm:h-40 flex space-x-3 items-center max-sm:flex-col" key={index}>
+            <img className="w-36 h-36" src={item.src} alt="icon" />
+            <div className=" max-sm:mt-4">
+              <h2 className="text-xl sm:text-2xl font-bold mb-1 max-sm:text-center">{item.Heading}</h2>
+              <p className="sm:text-lg mb-2 sm:font-medium sm:leading-5 opacity-75 max-sm:text-center">{item.SubHeading}</p>
             </div>
           </div>
         ))}

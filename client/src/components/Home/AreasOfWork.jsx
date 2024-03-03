@@ -95,18 +95,18 @@ const AreasOfWork = () => {
       </div>
 
       {/* Work Areas Item  */}
-      <div className="grid grid-cols-2  lg:grid-cols-4 gap-3 xl:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4 gap-3 xl:gap-6">
         {areaOfWorkData.map((item, index) => (
           <div
             key={index}
-            className="h-[16rem] relative group transition-all duration-300 overflow-hidden cursor-pointer rounded-sm"
+            className="h-[14rem] relative group transition-all duration-300 overflow-hidden cursor-pointer rounded-sm"
           >
             <div className="h-full">
               {/* Image */}
               <img
                 src={item.image}
                 alt={item.work}
-                className=" h-full w-full"
+                className=" h-full w-full object-cover"
               />
             </div>
 

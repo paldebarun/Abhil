@@ -7,7 +7,7 @@ import DonationImg6 from "../../assets/Donations/donation_help_6.png";
 import DonationImg7 from "../../assets/Donations/donation_help_7.png";
 import DonationImg8 from "../../assets/Donations/donation_help_8.png";
 
-const DonatationHelp = () => {
+const DonationHelp = () => {
   const DonationData = [
     {
       dtitle: "Quality Education",
@@ -53,10 +53,10 @@ const DonatationHelp = () => {
   return (
     <>
       {DonationData.map((item, index) => (
-        <div className="max-w-md p-1 mb-5" key={index}>
-          <img className="w-full mb-2" src={item.imgScr} alt={item.alt} />
+        <div className="w-full mb-5 rounded-md hover:overflow-hidden hover:shadow-lg hover:border transition-all delay-150 ease-in-out" key={index}>
+          <img className="w-full mb-2 object-contain" src={item.imgScr} alt={item.alt} />
           <div>
-            <h2 className="text-2xl text-center font-bold mb-2">{item.dtitle}</h2>
+            <h2 className="text-xl text-center font-semibold mb-2">{item.dtitle}</h2>
           </div>
         </div>
       ))}
@@ -64,4 +64,4 @@ const DonatationHelp = () => {
   );
 };
 
-export default DonatationHelp;
+export default DonationHelp;

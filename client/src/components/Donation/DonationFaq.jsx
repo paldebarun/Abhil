@@ -46,10 +46,10 @@ const DonationFaq = () => {
   ];
   return (
     <>
-      <div className=" text-center mb-6 transition-all duration-300">
+      <div className=" text-center mb-4 md:mb-8 transition-all duration-300">
         <motion.h1
           {...AnimationData.slideRight}
-          className="text-2xl md:text-4xl  text-secondary_color font-bold "
+          className="text-2xl md:text-4xl   text-secondary_color font-bold "
         >
           Frequently Asked Questions
         </motion.h1>
@@ -57,9 +57,9 @@ const DonationFaq = () => {
 
       <div className=" space-y-8 transition-all duration-300">
         {DonationFAQ.map((item, index) => (
-          <div key={index} className=" shadow-md px-6 py-4 rounded-lg">
+          <div key={index} className=" border shadow-md p-4 sm:px-6 sm:py-5 rounded-lg">
             <h1
-              className="text-2xl font-semibold py-2"
+              className="sm:text-xl font-semibold py-2"
               style={{
                 letterSpacing: "1px",
               }}
@@ -67,9 +67,9 @@ const DonationFaq = () => {
               {item.ques}
             </h1>
             <p
-              className=" text-text_color1"
+              className="text-sm sm:text-base text-text_color1"
               style={{
-                letterSpacing: "1px",
+                letterSpacing: "0.5px",
                 wordSpacing: "1px",
               }}
             >

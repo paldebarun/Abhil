@@ -23,17 +23,17 @@ const DonorTestimonials = () => {
   ];
   return (
     <>
-      <div className="flex justify-center items-center p-4 space-x-4 flex-col lg:flex-row">
+      <div className="grid md:grid-cols-2 max-md:gap-y-12 md:gap-x-8">
         {testimonialData.map((item, index) => (
           <motion.div
             {...AnimationData.slideLeft}
-            className="p-8 mt-4 mb-4 rounded-xl shadow-lg w-full lg:w-2/5"
+            className="p-5  sm:p-10 mt-4 mb-4 rounded-xl shadow-lg w-full"
             style={{ backgroundColor: item.bgcolor }}
             key={index}
           >
-            <div className="flex items-start space-x-4">
+            <div className="w-full flex items-start">
               <img
-                className="h-[6rem] w-[6rem] mt-[-3.75rem] rounded-full"
+                className=" h-[6rem] w-[6rem] object-cover mt-[-3.75rem] rounded-full"
                 src={item.img}
                 alt="Swakeert Jain"
               />
