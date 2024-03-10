@@ -25,6 +25,9 @@ app.use(
 //Connect Database
 connectDB();
 
+app.get("/", (req, res, next) => {
+  res.send(`Welcome, This Website is Working on ${process.env.FRONTEND_URL}`);
+});
 app.get("/api/v1", (req, res, next) => {
   res.send(`Welcome, This Website is Working on ${process.env.FRONTEND_URL}`);
 });
@@ -40,6 +43,9 @@ app.use(ErrorMiddleware);
 export const instance = new Razorpay({
   key_id: process.env.KEY_ID,
   key_secret: process.env.KEY_SECRET,
+  headers: {
+    "X-Razorpay-Account": process.env.MARCHENT_ID
+  }
 });
 
 

@@ -10,5 +10,4 @@ router.route("/payment").post(checkout);
 
 router.route("/paymentverification").post(paymentVerification);
 
-
 export { router };

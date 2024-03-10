@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Layout/Header";
@@ -12,6 +12,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import { Toaster } from "react-hot-toast";
 import Donation from "./components/Donation/Donation";
 import PaymentSuccess from "./components/Donation/PaymentSuccess";
+import Checkout from "./components/Donation/CheckoutForm";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/faq" element={<Faq />} />
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/donation" element={<Donation />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/paymentsuccess" element={<PaymentSuccess />} />
       </Routes>
       <Footer />

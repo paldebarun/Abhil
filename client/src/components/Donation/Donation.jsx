@@ -1,187 +1,34 @@
-import React, { useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 import MetaData from "../../utils/MetaData";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
-import Family from "../../assets/Donations/Family.jpg";
-import Assuarance from "../../assets/Donations/Assurance.jpg";
-import Part from "../../assets/Donations/PartsofCommunity.jpg";
 import Map from "../../assets/Donations/map.png";
 import SaveTax from "../../assets/Donations/Donate_save_tax1.png";
 import DonationHelp from "./DonationHelp";
 import DonationImpact from "./DonationImpact";
 import DonationFaq from "./DonationFaq";
 import DonorTestimonials from "./DonorTestimonials";
+import { useNavigate } from "react-router-dom";
+import { MdCancel } from "react-icons/md";
 
 const Donation = () => {
-  const [showTab, setShowTab] = useState(0);
-  const [manualAmount, setManualAmount] = useState("");
-
-  const AmountTabs = [
-    {
-      amount: 800,
-      content: (
-        <div className="h-full flex items-center justify-around gap-1 p-2 border-2 border-black">
-          <div className="h-[80%]">
-            <img
-              src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/0252ee0c-3de8-43ce-b257-08a249d23924.jpeg"
-              alt="childhelp"
-              className="h-full"
-            />
-          </div>
-          <div>
-            <h1 className=" sm:text-xl font-bold">INR 800 PER MONTH</h1>
-            <p className=" sm:text-lg font-medium">
-              Could help a child thrive.
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      amount: 1000,
-      content: (
-        <div className="h-full flex gap-1 items-center justify-around p-2 border-2 border-black">
-          <div className="h-[80%]">
-            <img
-              src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/0252ee0c-3de8-43ce-b257-08a249d23924.jpeg"
-              alt="childhelp"
-              className="h-full"
-            />
-          </div>
-
-          <div>
-            <h1 className=" sm:text-xl font-bold">INR 1000 PER MONTH</h1>
-            <p className=" sm:text-lg font-medium">
-              Could help a child thrive.
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      amount: 1500,
-      content: (
-        <div className="h-full flex items-center gap-1 justify-around p-2 border-2 border-black">
-          <div className="h-[80%]">
-            <img
-              src="https://image.info.unicef.org/lib/fe2f11717064047b751d76/m/1/0252ee0c-3de8-43ce-b257-08a249d23924.jpeg"
-              alt="childhelp"
-              className="h-full"
-            />
-          </div>
-
-          <div>
-            <h1 className=" sm:text-xl font-bold">INR 1500 PER MONTH</h1>
-            <p className=" sm:text-lg font-medium">
-              Could help a child thrive.
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      amount: "OTHER",
-      content: (
-        <div className="h-full flex items-center justify-around p-2 border-2 border-black">
-          <input
-            className="border-2 w-full py-2 px-4 border-gray-700"
-            type="number"
-            placeholder="₹ OTHER AMOUNT"
-            onChange={(e) => setManualAmount(e.target.value)}
-          ></input>
-        </div>
-      ),
-    },
-  ];
-
-  const Benefits = [
-    {
-      title: "ASSURANCE & TRANSPARENCY",
-      icon: Assuarance,
-      description:
-        "Our foundation's unwavering commitment to assurance and transparency builds trust, ensuring a brighter future for young minds we empower.",
-    },
-    {
-      title: "A Family of Changemakers",
-      icon: Family,
-      description:
-        "A united family, dedicated changemakers, nurturing young minds, fostering a brighter tomorrow, together making a difference.",
-    },
-    {
-      title: "Part of Community",
-      icon: Part,
-      description:
-        "We are part of a vibrant community, working together to empower young minds and create positive change.",
-    },
-  ];
-
-  const Membership = [
-    {
-      title: "Flexible Amount",
-      description:
-        "Membership offers flexibility, allowing you to contribute any amount to support our mission empowering young minds.",
-    },
-    {
-      title: "Flexible Duration",
-      description:
-        "Choose your membership duration, ensuring flexibility and alignment with your commitment to empowering young minds.",
-    },
-    {
-      title: "Flexible Payment",
-      description:
-        "Membership offers flexible payment options, making it easy for you to support our mission of empowering young minds.",
-    },
-  ];
-
-  const donateSubmitHandler = async () => {
-    try {
-      if (AmountTabs[showTab].amount === "OTHER") {
-        AmountTabs[showTab].amount = parseInt(manualAmount, 10);
-      } else if (typeof AmountTabs[showTab].amount === "string") {
-        amount = parseInt(amount, 10);
-      }
-
-      if (
-        !AmountTabs[showTab].amount ||
-        typeof AmountTabs[showTab].amount !== "number"
-      ) {
-        console.log(AmountTabs[showTab].amount);
-        console.error("Invalid amount:");
-        return;
-      }
-
-      const {
-        data: { key1 },
-      } = await axios.get("http://localhost:8000/api/v1/getkey");
-
-      const orderURL = "http://localhost:8000/api/v1/payment";
-      const {
-        data: { order },
-      } = await axios.post(orderURL, {
-        amount: AmountTabs[showTab].amount,
-      });
-
-      const options = {
-        key: key1,
-        amount: order.amount,
-        currency: "INR",
-        name: "Abhil Young Mind Foundation",
-        discription: "Donation for better future of poor childs.",
-        order_id: order.id,
-        callback_url: "http://localhost:8000/api/v1/paymentverification",
-
-        theme: {
-          color: "#3399cc",
-        },
-      };
-      const rzp1 = new window.Razorpay(options);
-      rzp1.open();
-      // initiatePayment(data);
-    } catch (error) {
-      console.log("order not placed", error);
-    }
+  const [details, SetDetails] = useState({
+    amount: 0,
+    toWhat: "",
+  });
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const donateNow = () => {
+    const { amount, toWhat } = details;
+    if (amount <= 0) return alert("please enter valid amount");
+    if (!toWhat) return alert("please choose payment option");
+    navigate("/checkout", { state: { amount, toWhat } });
   };
+
+  const handelChange = (e) => {
+    const { name, value } = e.target;
+    SetDetails({ ...details, [name]: value })
+  }
 
   return (
     <div className="w-full">
@@ -189,16 +36,108 @@ const Donation = () => {
       <MetaData title={"Donate Now"} />
 
       {/* Donation Content Componet */}
-      <div className="h-screen  desktopView relative" >
+      <div className="h-screen  desktopView relative">
         <div className=" text-white capitalize w-[90%] max-sm:mx-auto sm:w-[25rem] absolute max-sm:translate-x-[-50%] left-[50%] sm:left-[6rem] top-6 sm:top-[4.5rem]">
-          <h1 className="text-5xl sm:text-6xl max-sm:text-center font-bold leading-[55px] sm:leading-[70px] mb-4 sm:mb-8">humanity starts with charity</h1>
-          <p className="sm:text-2xl max-sm:text-center opacity-80">embrace humanity, spark hope change lives.</p>
-          <button className="max-sm:w-[15rem] mx-auto px-12 py-4 bg-orange-600 my-4 sm:my-8 text-xl font-bold uppercase max-sm:absolute max-sm:translate-x-[-50%] max-sm:left-[50%]" >Donate now</button>
+          <h1 className="text-5xl sm:text-6xl max-sm:text-center font-bold leading-[55px] sm:leading-[70px] mb-4 sm:mb-8">
+            humanity starts with charity
+          </h1>
+          <p className="sm:text-2xl max-sm:text-center opacity-80">
+            embrace humanity, spark hope change lives.
+          </p>
+          <button
+            className="max-sm:w-[15rem] mx-auto px-12 py-4 bg-orange-600 my-4 sm:my-8 text-xl font-bold uppercase max-sm:absolute max-sm:translate-x-[-50%] max-sm:left-[50%]"
+            onClick={() => setOpen(true)}
+          >
+            Donate now
+          </button>
         </div>
-        <div className="max-lg:hidden w-[16rem]  absolute bottom-12 right-36 text-white opacity-90 text-2xl"> 
+        <div className="max-lg:hidden w-[16rem]  absolute bottom-12 right-36 text-white opacity-90 text-2xl">
           Making a difference one donation at a time
         </div>
       </div>
+      {open && (
+        <section className="w-full h-screen flex justify-center items-center bg-black/80 fixed top-0 left-0 z-[9999]">
+          <div className="w-[25rem] h-[25rem] rounded-2xl bg-[#fef6e1] shadow-lg p-8 relative">
+            <MdCancel
+              size={30}
+              className="absolute top-2 right-2 cursor-pointer text-gray-600"
+              onClick={() => setOpen(false)}
+            />
+            <h1 className="font-bold text-center text-3xl text-green-500 mb-4">
+              Donate & Sav Tax
+            </h1>
+            <form onSubmit={donateNow}>
+              <div className="flex flex-wrap items-center text-lg font-semibold">
+
+                <input type="radio" name="amount" className="radioBtn" id="3000" value={3000}
+                  onChange={handelChange} />
+                <label htmlFor="3000" className="me-6">₹ 3000</label>
+
+                <input type="radio" name="amount" className="radioBtn" id="6000" value={6000}
+                  onChange={handelChange} />
+                <label htmlFor="6000" className="me-6">₹ 6000</label>
+
+                <input type="radio" name="amount" className="radioBtn" id="12000" value={12000}
+                  onChange={handelChange} />
+                <label htmlFor="12000" className="me-6">₹ 12000</label>
+
+                <div className="w-full">
+                  <input
+                    type="number"
+                    className="border rounded-md bg-white placeholder:text-base placeholder:font-normal py-2 outline-none px-3 text-base font-normal w-full my-3"
+                    placeholder="Other amount"
+                    name="amount"
+                    onChange={handelChange}
+                  />
+                </div>
+              </div>
+              <h3 className="text-lg font-medium mb-2 text-gray-800">
+                Choose your payment option
+              </h3>
+              <div className="space-y-2 font-medi text-gray-600">
+                <div className="space-x-2 flex items-center">
+                  <input
+                    type="radio"
+                    name="toWhat"
+                    className="radioBtn"
+                    value="Payment for Child Education"
+                    onChange={handelChange}
+                  />
+                  <label htmlFor="link-radio">Payment for Child Education.</label>
+                </div>
+                <div className="space-x-2 flex items-center">
+                  <input
+                    type="radio"
+                    name="toWhat"
+                    className="radioBtn"
+                    value="Payment for Poor's help"
+                    onChange={handelChange}
+                  />
+                  <label htmlFor="link-radio">Payment for Poor&apos;s help</label>
+                </div>
+                <div className="space-x-2 flex items-center">
+                  <input
+                    type="radio"
+                    name="toWhat"
+                    className="radioBtn"
+                    value="Payment for poor mass marriage"
+                    onChange={handelChange}
+                  />
+                  <label htmlFor="link-radio">
+                    Payment for poor mass marriage.
+                  </label>
+                </div>
+              </div>
+              <button
+                type="submit"
+                className="w-full uppercase bg-[#38b44a] text-xl font-semibold py-2.5 rounded-md text-white mt-4"
+              >
+                Donate Now
+              </button>
+            </form>
+          </div>
+        </section>
+      )}
 
       <div className="w-full max-w-screen-xl mx-auto p-4 sm:p-8">
         {/* Donation Discription  */}
@@ -211,8 +150,8 @@ const Donation = () => {
               Abhil Young Mind Donor Family
             </span>{" "}
             is a family of changemakers who believe we can help{" "}
-            <span className="font-semibold">children thrive and grow</span>{" "}
-            to their full potential when{" "}
+            <span className="font-semibold">children thrive and grow</span> to
+            their full potential when{" "}
             <span className=" font-semibold">
               we all unite as a family and pledge to support every child.
             </span>
@@ -227,8 +166,8 @@ const Donation = () => {
               {...AnimationData.slideRight}
               className="text-2xl md:text-4xl font-bold uppercase"
             >
-              "You make a living by what you get, You make a life by what you
-              give."
+              &quot;You make a living by what you get, You make a life by what
+              you give.&quot;
             </motion.h2>
             <div className="md:text-xl pt-3 md:pt-6 opacity-80">
               Even a small donation is a big help for someone in need and can
@@ -255,7 +194,6 @@ const Donation = () => {
           Our Impact Last Year
         </motion.h2>
         <DonationImpact />
-
 
         <div className="flex flex-col lg:flex-row my-16 items-center">
           <div className="lg:w-3/5">
@@ -318,7 +256,7 @@ const Donation = () => {
         {/* How Donation Help End*/}
 
         {/* About Foundation Start */}
-        <div className="my-6  md:my-12" >
+        <div className="my-6  md:my-12">
           <motion.h2
             {...AnimationData.slideRight}
             className="text-2xl md:text-4xl max-sm:text-center font-bold pb-3  uppercase"
@@ -328,20 +266,20 @@ const Donation = () => {
           <div className="opacity-80">
             <p className=" sm:text-xl leading-5 sm:leading-7 mb-2">
               Started in 2002, Smile Foundation is an Indian development
-              organisation that works with children and their families to provide
-              access to quality education, primary healthcare and livelihood
-              opportunities. We have over 400 projects, spread over 2000 villages
-              and slums in 25 states of the country.{" "}
+              organisation that works with children and their families to
+              provide access to quality education, primary healthcare and
+              livelihood opportunities. We have over 400 projects, spread over
+              2000 villages and slums in 25 states of the country.{" "}
             </p>
             <p className=" sm:text-xl leading-5 sm:leading-7">
               {" "}
               Smile Foundation acts as a catalyst in the cycle of change,
-              complementing and supplementing government efforts towards achieving
-              the Sustainable Development Goals (SDGs). We collaborate, sensitize
-              and partner with like-minded institutions and individuals to
-              implement high-impact programmes. The focus is to enable access,
-              enhance quality and bring long-term behavioral change to
-              communities, especially at the grassroots.
+              complementing and supplementing government efforts towards
+              achieving the Sustainable Development Goals (SDGs). We
+              collaborate, sensitize and partner with like-minded institutions
+              and individuals to implement high-impact programmes. The focus is
+              to enable access, enhance quality and bring long-term behavioral
+              change to communities, especially at the grassroots.
             </p>
           </div>
         </div>
