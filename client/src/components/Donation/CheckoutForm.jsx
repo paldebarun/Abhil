@@ -21,7 +21,7 @@ const Checkout = () => {
             }
             const {
                 data: { key1 },
-            } = await axios.get("https://api.abhilyoungmind.com/getkey");
+            } = await axios.get("https://api.abhilyoungmind.com/api/v1/getkey");
             const orderURL = "https://api.abhilyoungmind.com/api/v1/payment";
             const {
                 data: { order },
