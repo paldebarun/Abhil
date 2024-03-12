@@ -21,8 +21,8 @@ const Checkout = () => {
             }
             const {
                 data: { key1 },
-            } = await axios.get("http://api.abhilyoungmind.com/getkey");
-            const orderURL = "http://api.abhilyoungmind.com/api/v1/payment";
+            } = await axios.get("https://api.abhilyoungmind.com/getkey");
+            const orderURL = "https://api.abhilyoungmind.com/api/v1/payment";
             const {
                 data: { order },
             } = await axios.post(orderURL, {
@@ -38,7 +38,7 @@ const Checkout = () => {
                 order_id: order.id,
                 handler: function (res) {
                     axios
-                        .post(`http://api.abhilyoungmind.com/api/v1/paymentverification`, res)
+                        .post(`https://api.abhilyoungmind.com/api/v1/paymentverification`, res)
                         .then((res) => {
                             alert("payment successful, PaymentId: " + res.data.paymentId);
                             navigate('/paymentsuccess')
