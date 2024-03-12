@@ -57,30 +57,34 @@ const Donation = () => {
       </div>
       {open && (
         <section className="w-full h-screen flex justify-center items-center bg-black/80 fixed top-0 left-0 z-[9999]">
-          <div className="w-[25rem] h-[25rem] rounded-2xl bg-[#fef6e1] shadow-lg p-8 relative">
+          <div className="w-full h-full max-md:overflow-y-auto md:w-[35rem] md:min-h-[25rem] md:rounded-2xl bg-[#fef6e1] shadow-lg p-4 sm:p-8 relative">
             <MdCancel
               size={30}
               className="absolute top-2 right-2 cursor-pointer text-gray-600"
               onClick={() => setOpen(false)}
             />
-            <h1 className="font-bold text-center text-3xl text-green-500 mb-4">
+            <h1 className="font-bold text-center text-3xl text-green-500 max-md:mt-6 mb-4 md:mb-6">
               Donate & Sav Tax
             </h1>
             <form onSubmit={donateNow}>
               <div className="flex flex-wrap items-center text-lg font-semibold">
-
-                <input type="radio" name="amount" className="radioBtn" id="3000" value={3000}
-                  onChange={handelChange} />
-                <label htmlFor="3000" className="me-6">₹ 3000</label>
-
-                <input type="radio" name="amount" className="radioBtn" id="6000" value={6000}
-                  onChange={handelChange} />
-                <label htmlFor="6000" className="me-6">₹ 6000</label>
-
-                <input type="radio" name="amount" className="radioBtn" id="12000" value={12000}
-                  onChange={handelChange} />
-                <label htmlFor="12000" className="me-6">₹ 12000</label>
-
+                <div className="xl:w-2/3 mx-auto flex justify-between items-center">
+                  <div>
+                    <input type="radio" name="amount" className="radioBtn" id="3000" value={3000}
+                      onChange={handelChange} />
+                    <label htmlFor="3000" className="me-6">₹ 3000</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="amount" className="radioBtn" id="6000" value={6000}
+                      onChange={handelChange} />
+                    <label htmlFor="6000" className="me-6">₹ 6000</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="amount" className="radioBtn" id="12000" value={12000}
+                      onChange={handelChange} />
+                    <label htmlFor="12000" className="me-6">₹ 12000</label>
+                  </div>
+                </div>
                 <div className="w-full">
                   <input
                     type="number"
@@ -91,41 +95,43 @@ const Donation = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-lg font-medium mb-2 text-gray-800">
-                Choose your payment option
+              <h3 className="text-base font-semibold mb-3 text-gray-800">
+                We offer several ways to support our mission.
+                Choose the one that aligns with your interests
               </h3>
               <div className="space-y-2 font-medi text-gray-600">
-                <div className="space-x-2 flex items-center">
+                <div className="space-x-2 flex ">
                   <input
                     type="radio"
                     name="toWhat"
-                    className="radioBtn"
-                    value="Payment for Child Education"
+                    className="radioBtn min-w-min mt-1"
+                    style={{ minWidth: "16px" }}
+                    value="Invest in a Child's Future: Support our education programs and empower underprivileged children to reach their full potential."
                     onChange={handelChange}
                   />
-                  <label htmlFor="link-radio">Payment for Child Education.</label>
+                  <label htmlFor="link-radio text-xs"> <span className="font-semibold text-gray-700">Invest in a Child&apos;s Future: </span>Support our education programs and empower underprivileged children to reach their full potential.</label>
                 </div>
-                <div className="space-x-2 flex items-center">
+                <div className="space-x-2 flex ">
                   <input
                     type="radio"
                     name="toWhat"
-                    className="radioBtn"
-                    value="Payment for Poor's help"
+                    className="radioBtn min-w-min mt-1"
+                    style={{ minWidth: "16px" }}
+                    value="Help Families in Need: Contribute to our poverty alleviation initiatives, providing vital resources and support to struggling families."
                     onChange={handelChange}
                   />
-                  <label htmlFor="link-radio">Payment for Poor&apos;s help</label>
+                  <label htmlFor="link-radio text-xs"> <span className="font-semibold text-gray-700">Help Families in Need: </span>Contribute to our poverty alleviation initiatives, providing vital resources and support to struggling families.</label>
                 </div>
-                <div className="space-x-2 flex items-center">
+                <div className="space-x-2 flex">
                   <input
                     type="radio"
                     name="toWhat"
-                    className="radioBtn"
-                    value="Payment for poor mass marriage"
+                    className="radioBtn min-w-min mt-1"
+                    style={{ minWidth: "16px" }}
+                    value={"Facilitate Empowering Marriages: Support our program facilitating dignified mass marriages for underprivileged communities."}
                     onChange={handelChange}
                   />
-                  <label htmlFor="link-radio">
-                    Payment for poor mass marriage.
-                  </label>
+                  <label htmlFor="link-radio text-xs"> <span className="font-semibold text-gray-700"> Facilitate Empowering Marriages: </span>Support our program facilitating dignified mass marriages for underprivileged communities.</label>
                 </div>
               </div>
               <button

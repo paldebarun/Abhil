@@ -85,12 +85,13 @@ const Checkout = () => {
     };
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto py-12">
+            <div className="uppercase text-center text-2xl font-bold mb-10 underline underline-offset-8 decoration-[#32d314]">
+                Thank you for Donating - Share Your Details
+            </div>
             <div className="flex justify-center my-8">
                 <form className="w-full max-w-lg px-6" onSubmit={handleFormSubmit}>
-                    <div className="uppercase flex justify-center text-2xl font-semibold mb-10 underline underline-offset-8 decoration-[#32d314]">
-                        Checkout Form
-                    </div>
+                    {/* <h1>{state.toWhat}</h1> */}
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full">
                             <label
