@@ -51,7 +51,7 @@ const Faq = () => {
   return (
     <div className="w-full min-h-[100vh]   ">
       {/* MetData  */}
-      <MetaData title={"FAQ"} />
+      <MetaData title={"Abhil Young Mind: Frequently Asked Questions (FAQs)"} description="Find Answers to Your Questions About Abhil Young Mind! Our FAQ page covers mental health support, educational resources, and more. Learn how we can help!"/>
 
       {/* PageHeader  */}
       <PageHeader title1={"FAQ"} title2={""} />
