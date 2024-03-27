@@ -1,10 +1,10 @@
-import React from "react";
+
 import homeBack from "../../assets/AboutUs/communityTrust.jpg";
 import { useMyContext } from "../../context/ActiveLinkContext";
 import {
   About,
   CommunityTrust,
-  ExperiencedPeople,
+  // ExperiencedPeople,
   WhyChooseUs,
 } from "../AboutUs/AboutUs";
 import { FaPeopleArrows } from "react-icons/fa";
@@ -56,7 +56,7 @@ const Home = () => {
               {...AnimationData.slideRightDelay}
               className="md:w-[50%] text-center  text-white text-lg"
             >
-              "Welcome to our educational facility's website, where we're devoted to nurturing the psychological well-being of young individuals, guiding them to overcome destructive habits, and lighting the path towards a brighter, promising future."
+              &quot;Welcome to our educational facility&apos;s website, where we&apos;re devoted to nurturing the psychological well-being of young individuals, guiding them to overcome destructive habits, and lighting the path towards a brighter, promising future.&quot;
             </motion.p>
 
             <motion.div {...AnimationData.slideUpDelay}>
@@ -66,7 +66,7 @@ const Home = () => {
               >
                 {" "}
                 <button className="px-3 py-4 mt-6 font-bold text-white bg-transparent border-2 border-secondary_color  rounded-b-2xl rounded-tl-2xl hover:bg-secondary_color  transition-all duration-300">
-                  Let's Connect
+                  Let&apos;s Connect
                 </button>{" "}
               </Link>
             </motion.div>
@@ -123,7 +123,7 @@ const Home = () => {
         {/* Areas of Work  */}
         <AreasOfWork />
         {/* Experiance People  */}
-        <ExperiencedPeople />
+        {/* <ExperiencedPeople /> */}
         {/* Appointment */}
         <AppintmentForm />
       </div>

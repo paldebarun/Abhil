@@ -37,6 +37,22 @@ const Footer = () => {
       title: "Contact Us",
       path: "/contactus",
     },
+    {
+      title: "Terms & Conditions",
+      path: "/terms",
+    },
+    {
+      title: "Privacy Policy",
+      path: "/privacy",
+    },
+    {
+      title: "Cancellation Policy",
+      path: "/cancellation",
+    },
+    {
+      title: "Refund Policy",
+      path: "/refund",
+    },
   ];
 
   const Services = [

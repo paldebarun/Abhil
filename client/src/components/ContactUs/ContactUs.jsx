@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { BiLocationPlus, BiPhoneCall, BiWorld } from "react-icons/bi";
 import { CiFacebook, CiInstagram, CiTwitter, CiYoutube } from "react-icons/ci";
 import { AiOutlineMail } from "react-icons/ai";
@@ -82,8 +82,7 @@ const ContactUs = () => {
         {
           headers: {
             "Content-Type": "application/json",
-          },
-          withCredentials: true,
+          }
         }
       );
       setLoading(false);
@@ -203,7 +202,7 @@ const ContactUs = () => {
                 wordSpacing: "1px",
               }}
             >
-              Have questions or need support? Get in touch with us for guidance on fostering mental growth, improving well-being, and embracing a better, smarter life. We're here to help.
+              Have questions or need support? Get in touch with us for guidance on fostering mental growth, improving well-being, and embracing a better, smarter life. We&apos;re here to help.
             </p>
           </div>
 
@@ -235,6 +234,7 @@ const ContactUs = () => {
                   className=" bg-secondary_color mr-4 text-4xl p-1 rounded-full text-white flex items-center justify-center border-2 transition-all  duration-300   border-secondary_color hover:bg-transparent hover:text-primary_color hover:-translate-y-1 "
                   href={item.url}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   {item.icon}
                 </a>

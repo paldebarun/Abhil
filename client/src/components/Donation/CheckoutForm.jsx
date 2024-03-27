@@ -41,7 +41,7 @@ const Checkout = () => {
                         .post(`http://localhost:8000/api/v1/paymentverification`, res)
                         .then((res) => {
                             alert("payment successful, PaymentId: " + res.data.paymentId);
-                            navigate('/paymentsuccess')
+                            navigate('/paymentsuccess', { state: res.data.paymentId })
                         })
                         .catch((err) => console.log(err));
                 },
@@ -82,6 +82,7 @@ const Checkout = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         checkoutHandler();
+        // navigate('/payment')
     };
 
     return (

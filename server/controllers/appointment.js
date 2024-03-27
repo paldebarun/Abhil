@@ -3,8 +3,7 @@ import ErrorHandler from "../utils/errorHandler.js";
 
 export const appoinment = async (req, res, next) => {
   try {
-    const { name, email, phone, service, date } = req.body;
-
+    const { name, email, phone, service, date } = req.body; 
     if (!name || !email || !phone || !service || !date) {
       return next(new ErrorHandler("Please Entre all Fields", 400));
     }

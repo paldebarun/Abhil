@@ -13,6 +13,11 @@ import { Toaster } from "react-hot-toast";
 import Donation from "./components/Donation/Donation";
 import PaymentSuccess from "./components/Donation/PaymentSuccess";
 import Checkout from "./components/Donation/CheckoutForm";
+import PaymentPage from "./components/Donation/PaymentPage";
+import TermsCondition from "./pages/TermsCondition";
+import RefundPolicy from "./pages/RefundPolicy";
+import CancellationPolicy from "./pages/CancellationPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const App = () => {
   return (
@@ -26,7 +31,12 @@ const App = () => {
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/donation" element={<Donation />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<PaymentPage />} />
         <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+        <Route path="/terms" element={<TermsCondition />} />
+        <Route path="/refund" element={<RefundPolicy />} />
+        <Route path="/cancellation" element={<CancellationPolicy />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
       <ScrollToTop />

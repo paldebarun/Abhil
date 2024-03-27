@@ -57,7 +57,7 @@ const Donation = () => {
       </div>
       {open && (
         <section className="w-full h-screen flex justify-center items-center bg-black/80 fixed top-0 left-0 z-[9999]">
-          <div className="w-full h-full max-md:overflow-y-auto md:w-[35rem] md:min-h-[25rem] md:rounded-2xl bg-[#fef6e1] shadow-lg p-4 sm:p-8 relative">
+          <div className="w-full   max-md:overflow-y-auto md:w-[35rem] min-h-[25rem] md:rounded-2xl bg-[#fef6e1] shadow-lg p-4 sm:p-8 relative">
             <MdCancel
               size={30}
               className="absolute top-2 right-2 cursor-pointer text-gray-600"

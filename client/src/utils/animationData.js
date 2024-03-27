@@ -13,14 +13,14 @@ export const AnimationData = {
     whileInView: { x: 0, opacity: 1 },
     viewport: { once: true },
     transition: {
-      duration: 1.5,
+      duration: 1,
       ease: "easeInOut",
       delay: 1,
     },
   },
   slideLeft: {
-    initial: { x: "100%", opacity: 0 },
-    whileInView: { x: 0, opacity: 1 },
+    initial: { x: "-10%", opacity: 0  },
+    whileInView: { x: 0, opacity: 1  },
     viewport: { once: true },
     transition: {
       duration: 1.5,

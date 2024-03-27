@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PageHeader from "../Layout/PageHeader";
 import MetaData from "../../utils/MetaData";
 import downArrow from "../../assets/down-arrow-svgrepo-com.svg";
@@ -71,11 +71,9 @@ export const AppintmentForm = () => {
         {
           headers: {
             "Content-Type": "application/json",
-          },
-          withCredentials: true,
+          }
         }
       );
-      console.log(name, service, phone, date, email);
       setLoading(false);
       setName("");
       setEmail("");
