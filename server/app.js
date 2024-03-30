@@ -15,7 +15,7 @@ app.use(
   })
 );
 app.use(cors({
-  origin: [process.env.FRONTEND_URL],
+  origin: [process.env.FRONTEND_URL, 'https://www.abhilyoungmind.com','https://abhilyoungmind.com/'],
   methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 
@@ -25,15 +25,18 @@ connectDB();
 
 app.get("/", (req, res, next) => {
   res.send(`Welcome, This Website is Working on ${process.env.FRONTEND_URL}`);
+  res.setHeader('Access-Control-Allow-Origin', '*');
 });
 app.get("/api/v1", (req, res, next) => {
   res.send(`Welcome, This Website is Working on ${process.env.FRONTEND_URL}`);
+  res.setHeader('Access-Control-Allow-Origin', '*');
 });
 
 app.use("/api/v1", router);
 
 app.get("/api/v1/getkey", (req, res) => {
   res.status(200).json({ key1: process.env.KEY_ID });
+  res.setHeader('Access-Control-Allow-Origin', '*');
 });
 
 app.use(ErrorMiddleware);
