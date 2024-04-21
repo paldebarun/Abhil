@@ -14,7 +14,7 @@ const Appointment = () => {
   return (
     <div className="w-full min-h-[100vh] bg-background_color">
       {/* MetData  */}
-      <MetaData title={"Appoinment"} />
+      <MetaData title={"Free Appoinment - Abhil Young Mind Foundation"} description="Get the Support You Deserve at Abhil Young Mind. Schedule an appointment for personalized mental health care, educational guidance, or empowering marriage therapy. We listen & help you thrive." />
 
       {/* PageHeader  */}
       <PageHeader title1={"Appoinment"} title2={""} />

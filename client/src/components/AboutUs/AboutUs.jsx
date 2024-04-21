@@ -23,7 +23,7 @@ const AboutUs = ({ setActiveUrl }) => {
   return (
     <div className="w-full min-h-[100vh] bg-background_color  ">
       {/* MetData  */}
-      <MetaData title={"About Us"} />
+      <MetaData title={"About Us - Abhil Young Mind Foundation"} description="Learn about our mission to support young mental well-being, education, and empowered families. Donate and make a difference!" />
 
       {/* PageHeader  */}
       <PageHeader title1={"About"} title2={"Us"} setActiveUrl={setActiveUrl} />
@@ -53,7 +53,7 @@ export const About = () => {
       <div className=" lg:w-[50%]">
         <div>
           <h3 className="font-[cursive] text-secondary_color text-xl  my-4">
-            About Abhil Young Mind
+            About Abhil Young Mind Foundation
           </h3>
         </div>
 

@@ -82,7 +82,7 @@ const AreasOfWork = () => {
       {/* Heading  */}
       <div className="mb-10">
         <h3 className="font-[cursive] text-secondary_color text-xl  my-4">
-          What We can do?
+          What We do?
         </h3>
         <div>
           <motion.h1

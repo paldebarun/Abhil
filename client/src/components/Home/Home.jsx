@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="w-full min-h-[100vh]  ">
       {/* MetData  */}
-      <MetaData title={"Home"} />
+      <MetaData title={"Abhil Young Mind: Empowering Young Minds for Growth & Resilience"} description="Abhil Young Mind, a foundation dedicated to empowering young minds & building stronger communities. We provide resources for mental wellness, support children's education, & facilitate empowering marriages. Donate & make a difference!" />
 
       {/* Home Content  */}
       <div>
@@ -56,7 +56,7 @@ const Home = () => {
               {...AnimationData.slideRightDelay}
               className="md:w-[50%] text-center  text-white text-lg"
             >
-              &quot;Welcome to our educational facility&apos;s website, where we&apos;re devoted to nurturing the psychological well-being of young individuals, guiding them to overcome destructive habits, and lighting the path towards a brighter, promising future.&quot;
+              Abhil Young Mind, a foundation dedicated to empowering young minds & building stronger communities. We provide resources for mental wellness, support children's education, & facilitate empowering marriages. Donate & make a difference! 
             </motion.p>
 
             <motion.div {...AnimationData.slideUpDelay}>
@@ -78,37 +78,37 @@ const Home = () => {
         >
           <div className="lg:w-1/3 text-center bg-secondary_color flex flex-col gap-2 items-center justify-center py-8 sm:py-14 px-6 rounded-l-[3rem] rounded-br-[3rem]">
             <span className=" text-6xl">
-              <FaPeopleArrows />
+              <FaPeopleArrows color="white" />
             </span>
-            <h2 className=" text-white text-2xl font-medium">
-              Nurturing Minds
+            <h2 className=" text-white text-xl font-medium">
+            Thriving Minds, Stronger Communities
             </h2>
-            <p className=" text-lg text-white ">
-              Cultivating mental, emotional health for a fulfilling life.
+            <p className=" text-md text-white ">
+            Empower young minds, build stronger communities. Donate to Abhil Young Mind!
             </p>
           </div>
 
           <div className=" lg:w-1/3 text-center bg-primary_color flex flex-col  gap-2 items-center justify-center py-14 px-6 rounded-[3rem]">
             <span className=" text-6xl">
-              <FaPeopleArrows />
+              <FaPeopleArrows color="white" />
             </span>
-            <h2 className=" text-white text-2xl font-medium">
-              Breaking Free Together:
+            <h2 className="text-white text-xl font-medium">
+            Building Resilience. Building Hope.
             </h2>
-            <p className=" text-lg text-white ">
-              Guiding Youth Away from Destructive Habits
+            <p className=" text-md text-white ">
+            Support young mental well-being. Abhil Young Mind offers resources & guidance. Learn More!
             </p>
           </div>
 
           <div className="lg:w-1/3 text-center bg-secondary_color flex flex-col  gap-2 items-center justify-center  py-14 px-6 rounded-r-[3rem] rounded-tl-[3rem]">
             <span className=" text-6xl">
-              <FaPeopleArrows />
+              <FaPeopleArrows color="white"/>
             </span>
-            <h2 className=" text-white text-2xl font-medium">
-              Towards a Brighter Tomorrow
+            <h2 className=" text-white text-xl font-medium">
+            Invest in the Future. Donate.
             </h2>
-            <p className=" text-lg text-white ">
-              Paving the Path for Promising Futures
+            <p className=" text-md text-white ">
+            Your donation empowers young minds, strengthens families. Donate to Abhil Young Mind today!
             </p>
           </div>
         </motion.div>

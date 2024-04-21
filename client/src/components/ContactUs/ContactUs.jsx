@@ -100,7 +100,7 @@ const ContactUs = () => {
   return (
     <div className="w-full min-h-[100vh] bg-background_color">
       {/* MetData  */}
-      <MetaData title={"Contact Us"} />
+      <MetaData title={"Connect with Abhil Young Mind: We're Here to Help!"} description="Reach Out to Abhil Young Mind Foundation. Find our contact information, including phone number, email address, and a contact form. We look forward to hearing from you!" />
 
       {/* PageHeader  */}
       <PageHeader title1={"Contact"} title2={"Us"} />

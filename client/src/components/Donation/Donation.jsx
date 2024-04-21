@@ -33,7 +33,7 @@ const Donation = () => {
   return (
     <div className="w-full">
       {/* MetData  */}
-      <MetaData title={"Donate Now"} />
+      <MetaData title={"Support Mental Wellness, Education, & Families. Donate Now to Abhil Young Mind!"} description="our donation makes a difference! Invest in the future by supporting Abhil Young Mind's mission: mental well-being, education, and empowered families. Donate today!" />
 
       {/* Donation Content Componet */}
       <div className="h-screen  desktopView relative">
