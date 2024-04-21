@@ -22,7 +22,7 @@ const Donation = () => {
     const { amount, toWhat } = details;
     if (amount <= 0) return alert("please enter valid amount");
     if (!toWhat) return alert("please choose payment option");
-    navigate("/checkout", { state: { amount, toWhat } });
+    navigate("/donation-now", { state: { amount, toWhat } });
   };
 
   const handelChange = (e) => {

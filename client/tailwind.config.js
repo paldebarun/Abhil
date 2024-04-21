@@ -27,6 +27,10 @@ export default {
         background_color: "#F2F2F2",
         text_color1: "#858585",
       },
+      screens: {
+        xs:"475px",
+      }
+
     },
   },
   plugins: [],

@@ -4,13 +4,38 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  width: 100vw !important; 
-  overflow-x: hidden !important;;
+body {
+  width: 100vw !important;
+  overflow-x: hidden !important;
 }
 
 @layer components {
   .radioBtn {
-    @apply  w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 cursor-pointer me-1;
+    @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 cursor-pointer me-1;
+  }
+  .donation-input {
+    @apply appearance-none block w-full text-gray-700 border border-gray-400 rounded py-2 px-4 mb-3 focus:outline-none bg-white focus:border-[#32d314];
+  }
+  .donation-label {
+    @apply block capitalize tracking-wide text-gray-700 text-sm font-bold mb-2;
+  }
+}
+.button {
+  width: 13rem;
+  height: 80px;
+  border-radius: 35px;
+  background-color: #00715d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  @media screen and (max-width: 650px) {
+    width: "8rem" !important;
+    height: "60px" !important;
+    border-radius: "25px" !important;
+    font-size: "18px" !important; 
+    background-color: red !important;
   }
 }
