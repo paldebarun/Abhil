@@ -20,6 +20,7 @@ import CancellationPolicy from "./pages/CancellationPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Login from "./pages/Login";
 import { FaHeart } from "react-icons/fa";
+import ChatBotPage from "./pages/ChatBotPage";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/cancellation" element={<CancellationPolicy />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/admin/login" element={<Login />} />
+        <Route path="/chat-bot" element={<ChatBotPage />} />
       </Routes>
       <Footer />
       <div className="fixed bottom-4 xs:bottom-8 left-4 xs:left-8 z-[9999]">
@@ -47,6 +49,12 @@ const App = () => {
           <button className="w-14 xs:w-44 gap-x-2 flex items-center justify-center rounded-full bg-green-600 text-white text-lg font-semibold py-3 cursor-pointer z-[9999] shadow-md shadow-green-50"> <FaHeart /> <span className="max-xs:hidden">Donate now</span> </button>
         </Link>
       </div>
+      <div className="fixed bottom-4 xs:bottom-8 right-4 xs:right-8 z-[9999]">
+        <Link to={'/chat-bot'}>
+          <button className="w-14 xs:w-44 gap-x-2 flex items-center justify-center rounded-full bg-yellow-600 text-white text-lg font-semibold py-3 cursor-pointer z-[9999] shadow-md shadow-green-50">  <span className="max-xs:hidden">Chat Bot</span> </button>
+        </Link>
+      </div>
+
       <ScrollToTop />
       <Toaster />
     </Router>
