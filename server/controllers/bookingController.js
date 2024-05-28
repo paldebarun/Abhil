@@ -1,4 +1,4 @@
-import {Booking} from '../models/bookingSchema'
+import {Booking} from '../models/bookingSchema.js'
 
 
 export const book=async (req, res) => {

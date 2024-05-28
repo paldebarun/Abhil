@@ -2,7 +2,7 @@ import express from "express";
 import { sendMessage } from "../controllers/sendMessage.js";
 import { appoinment } from "../controllers/appointment.js";
 import { router as paymentRouter } from "./payment.js";
-import {book} from '../controllers/bookingController';
+import {book} from "../controllers/bookingController.js"
 
 const router = express.Router();
 

@@ -51,7 +51,7 @@ const App = () => {
       </div>
       <div className="fixed bottom-4 xs:bottom-8 right-4 xs:right-8 z-[9999]">
         <Link to={'/chat-bot'}>
-          <button className="w-14 xs:w-44 gap-x-2 flex items-center justify-center rounded-full bg-yellow-600 text-white text-lg font-semibold py-3 cursor-pointer z-[9999] shadow-md shadow-green-50">  <span className="max-xs:hidden">Chat Bot</span> </button>
+          <button className="w-14 xs:w-44 gap-x-2 flex items-center justify-center rounded-full bg-yellow-600 text-white text-lg font-semibold py-3 cursor-pointer z-[9999] shadow-md shadow-green-50">  <span className="text-[8px] xs:text-[15px]">Chat Bot</span> </button>
         </Link>
       </div>
 

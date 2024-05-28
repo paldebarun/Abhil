@@ -20,6 +20,7 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 
+
 // app.use(cors());
 
 //Connect Database

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMachine } from '@xstate/react';
 import chatbotMachine from '../../chatbotMachine';
+import axios from 'axios'
 
 const ChatBot = () => {
   const [state, send] = useMachine(chatbotMachine);
@@ -26,22 +27,21 @@ const ChatBot = () => {
     } else if (currentEvent === 'SUBMIT') {
       try {
         console.log("this is the final context : ",state.context);
-        const response = await fetch('http://localhost:5000/api/v1/book', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(state.context)
-        });
+       
 
-        if (!response.ok) {
+        const response =await axios.post('http://localhost:8000/api/v1/book',state.context);
+
+        console.log("this is response : ",response);
+
+        if (!response.data.success) {
           throw new Error('Form submission failed');
         }
 
-        send('SUCCESS');
+        send({ type: 'SUCCESS' });
+
       } catch (error) {
         console.error("this is error",error);
-        send('FAILURE');
+        send({ type: 'FAILURE' });
       }
     }
 
