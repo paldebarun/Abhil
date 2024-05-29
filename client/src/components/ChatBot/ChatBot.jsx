@@ -39,6 +39,10 @@ const ChatBot = () => {
 
         send({ type: 'SUCCESS' });
 
+      
+          send({ type: 'START_OVER' });
+   
+
       } catch (error) {
         console.error("this is error",error);
         send({ type: 'FAILURE' });
@@ -73,6 +77,17 @@ const ChatBot = () => {
     }
   };
 
+  const getInputType = () => {
+    switch (state.value) {
+      case 'askEmail':
+        return 'email';
+      case 'askPhone':
+        return 'tel';
+      default:
+        return 'text';
+    }
+  };
+
   return (
     <div className='flex justify-center px-1'>
       <div className="chat-box w-full bg-slate-300 flex flex-col gap-6 items-center">
@@ -80,7 +95,7 @@ const ChatBot = () => {
         {(state.value !== 'submitting' && state.value !== 'success' && state.value !== 'failure') && (
           <form onSubmit={handleSubmit} className="flex w-full flex-col gap-2">
             <input
-              type="text"
+              type={getInputType()}
               value={input}
               onChange={(e) => setInput(e.target.value)}
               required

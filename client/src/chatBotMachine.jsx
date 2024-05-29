@@ -81,7 +81,15 @@ const chatbotMachine = createMachine({
     },
     success: {
       on: {
-        START_OVER: 'welcome'
+        START_OVER: {
+          target: 'welcome',
+          actions: assign({
+            name: '',
+            email: '',
+            phone: '',
+            message: ''
+          })
+        }
       }
     },
     failure: {
