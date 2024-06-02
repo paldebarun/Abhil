@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { useMachine } from '@xstate/react';
 import chatbotMachine from '../../chatbotMachine';
-import axios from 'axios'
+import axios from 'axios';
+import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const ChatBot = () => {
   const [state, send] = useMachine(chatbotMachine);
   const [input, setInput] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,33 +22,35 @@ const ChatBot = () => {
     };
 
     const currentEvent = eventMap[state.value];
-    console.log("this is event: ", currentEvent);
-    console.log("this is input: ", input);
+    console.log("Current Event:", currentEvent);
+    console.log("Input:", input);
 
     if (currentEvent && currentEvent !== 'SUBMIT') {
       send({ type: currentEvent, value: input });
     } else if (currentEvent === 'SUBMIT') {
+      const toastId = toast.loading("Submitting...");
       try {
-        console.log("this is the final context : ",state.context);
-       
+        console.log("Final Context:", state.context);
+        const response = await axios.post('http://localhost:8000/api/v1/book', state.context);
 
-        const response =await axios.post('http://localhost:8000/api/v1/book',state.context);
-
-        console.log("this is response : ",response);
-
+        console.log("Response:", response);
         if (!response.data.success) {
           throw new Error('Form submission failed');
         }
 
+        toast.dismiss(toastId);
+        toast.success("Successfully submitted!");
         send({ type: 'SUCCESS' });
-
-      
-          send({ type: 'START_OVER' });
-   
+        navigate(-1);  // Navigate to the previous page
 
       } catch (error) {
-        console.error("this is error",error);
+        toast.dismiss(toastId);
+        toast.error("Error, please try again.");
+        console.error("Error:", error);
         send({ type: 'FAILURE' });
+        setTimeout(() => {
+          window.location.reload();  // Reload the page after showing the error toast
+        }, 1000);
       }
     }
 
