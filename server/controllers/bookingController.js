@@ -1,12 +1,11 @@
-import {Booking} from '../models/bookingSchema.js'
+import { Booking } from '../models/bookingSchema.js';
 
-
-export const book=async (req, res) => {
+export const book = async (req, res) => {
     try {
-      const booking = new Booking(req.body);
-      await booking.save();
-      res.status(201).send({ success: true, data: booking });
+        const booking = new Booking(req.body);
+        await booking.save();
+        res.status(201).send({ success: true, data: booking });
     } catch (error) {
-      res.status(400).send({ success: false, message: error.message });
+        res.status(400).send({ success: false, message: error.message });
     }
-  }
+}

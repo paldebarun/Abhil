@@ -21,6 +21,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Login from "./pages/Login";
 import { FaHeart } from "react-icons/fa";
 import ChatBotPage from "./pages/ChatBotPage";
+import Myappointments from "./pages/Myappointments";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/admin/login" element={<Login />} />
         <Route path="/chat-bot" element={<ChatBotPage />} />
+        <Route path="/myAppointments/:username" element={<Myappointments />} />
       </Routes>
       <Footer />
       <div className="fixed bottom-4 xs:bottom-8 left-4 xs:left-8 z-[9999]">

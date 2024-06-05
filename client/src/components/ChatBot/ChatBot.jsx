@@ -31,7 +31,15 @@ const ChatBot = () => {
       const toastId = toast.loading("Submitting...");
       try {
         console.log("Final Context:", state.context);
-        const response = await axios.post('http://localhost:8000/api/v1/book', state.context);
+
+        const contextWithUsername = {
+          ...state.context,
+          username: 'user' 
+        };
+
+        const response = await axios.post('http://localhost:8000/api/v1/book', contextWithUsername);
+
+
 
         console.log("Response:", response);
         if (!response.data.success) {
