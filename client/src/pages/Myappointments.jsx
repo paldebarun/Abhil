@@ -38,7 +38,7 @@ const Myappointments = () => {
       ) : (
         <div>
         
-          {/* Render appointments data */}
+          
           <div>
             {appointments.map((appointment, index) => (
               <div key={index}>
